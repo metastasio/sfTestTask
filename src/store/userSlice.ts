@@ -1,26 +1,31 @@
-import { createSlice } from '@reduxjs/toolkit';
+import { PayloadAction, createSlice } from '@reduxjs/toolkit';
+
+type InitialState = {
+  signedIn: boolean;
+  email: FormDataEntryValue | null;
+  userName: string;
+  error: string | null;
+};
+
+const initialState: InitialState = {
+  signedIn: false,
+  email: null,
+  userName: '',
+  error: null,
+};
 
 const userSlice = createSlice({
   name: 'user',
-  initialState: {
-    signedIn: false,
-    email: null,
-    userId: null,
-    status: 'idle',
-    icon: null,
-    error: null,
-  },
+  initialState,
   reducers: {
-    logOut(state, { payload }) {
-      state.status = 'idle';
+    logIn(state, { payload }: PayloadAction<FormDataEntryValue>) {
       state.signedIn = true;
-      state.email = payload.email;
-      state.userId = payload.uid;
-      state.icon = payload?.icon;
+      state.email = payload;
+      state.userName = 'Михаил';
       state.error = null;
     },
   },
 });
-export const { logOut } = userSlice.actions;
+export const { logIn } = userSlice.actions;
 
 export default userSlice.reducer;
