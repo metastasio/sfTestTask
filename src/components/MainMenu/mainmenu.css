@@ -1,6 +1,6 @@
 .menu {
   max-width: 236px;
-  margin-top: 24px;
+  margin-top: -40px;
   padding: 44px 20px 24px 0;
   background-color: var(--secondary-bg);
   border-radius: var(--base-radius);
