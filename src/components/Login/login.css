@@ -4,8 +4,8 @@
 }
 
 .login_logo {
-  /* padding: 0 130px 30px; */
-  margin: 0 130px 26px;
+  display: block;
+  margin: 0 auto 26px;
 }
 
 .login_title {
@@ -91,7 +91,7 @@
   transition: 120ms transform ease-in-out;
   box-shadow: inset 10px 10px var(--third-color);
 }
-input[type='checkbox']:checked::before {
+.login_rm_check:checked::before {
   transform: scale(1);
 }
 

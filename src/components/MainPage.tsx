@@ -4,7 +4,6 @@ import { MainMenu } from './MainMenu/MainMenu';
 export const MainPage = () => {
   return (
     <div>
-      <h1>This is Main</h1>
       <Header />
       <MainMenu />
     </div>
