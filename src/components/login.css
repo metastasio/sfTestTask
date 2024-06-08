@@ -130,7 +130,7 @@ input[type='checkbox']:checked::before {
 
 .login_register {
   display: block;
-  margin: 10px 0;
+  margin: 8px 0 0 0;
   text-align: center;
 }
 
@@ -138,7 +138,7 @@ input[type='checkbox']:checked::before {
   display: flex;
   flex-flow: row nowrap;
   justify-content: center;
-  margin-top: 100px;
+  margin-top: 102px;
 }
 
 .login_ru,
@@ -147,6 +147,7 @@ input[type='checkbox']:checked::before {
   background-color: transparent;
   color: var(--secondary-font);
   font-family: var(--ff-main);
+  font-size: 16px;
   &:hover {
     cursor: pointer;
   }
