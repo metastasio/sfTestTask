@@ -1,11 +1,12 @@
 import { FormEventHandler, useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { logIn } from '../store/userSlice';
 
 export const LogInPage = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const navigate = useNavigate();
   const dispatch = useDispatch();
 
   const handleSubmit: FormEventHandler<HTMLFormElement> = (e) => {
@@ -17,6 +18,7 @@ export const LogInPage = () => {
       dispatch(logIn(email));
       setEmail('');
       setPassword('');
+      navigate('/');
     }
   };
 

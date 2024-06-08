@@ -19,6 +19,7 @@ const userSlice = createSlice({
   initialState,
   reducers: {
     logIn(state, { payload }: PayloadAction<FormDataEntryValue>) {
+      console.log(payload);
       state.signedIn = true;
       state.email = payload;
       state.userName = 'Михаил';

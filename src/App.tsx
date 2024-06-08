@@ -1,5 +1,3 @@
-// import { useState } from 'react';
-
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { LogInPage } from './components/LogInPage';
 import { MainPage } from './components/MainPage';

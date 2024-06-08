@@ -1,4 +1,49 @@
+@font-face {
+  font-family: "Circe Rounded";
+  src: url("assets/fonts/CirceRounded-Regular.ttf");
+}
+
 :root {
+  --main-bg: #f6f6fe;
+  --secondary-bg: #eeeeff;
+  --main-font: #323854;
+  --secondary-font: #79747f;
+  --button-font-color: #ffffff;
+  --link-font-color: #008aff;
+  --button-bg-color: ##8d7fc7;
+  --third-color: #7362bc;
+  --adv-bg: #fff1cb;
+  --border-color: #ececec;
+  --table-inactive-bg: #FBFBFC;
+  --table-active-bg: #ffffff
+
+  --base-radius: 30px;
+}
+
+html {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0 50px;
+  padding: 0;
+  width: 100%;
+  background-color: var(--main-bg);
+  color: var(--main-font);
+  font-family: 'Circe Rounded', sans-serif;
+  font-size: 16px;
+  outline: 1px solid red;
+}
+
+/* :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
@@ -65,4 +110,4 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
-}
+} */
