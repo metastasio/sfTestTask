@@ -1,5 +1,5 @@
 import { Header } from './Header';
-import { MainMenu } from './MainMenu';
+import { MainMenu } from './MainMenu/MainMenu';
 
 export const MainPage = () => {
   return (

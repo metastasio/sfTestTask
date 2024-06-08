@@ -1,0 +1,129 @@
+.menu {
+  max-width: 236px;
+  margin-top: 24px;
+  padding: 44px 20px 24px 0;
+  background-color: var(--secondary-bg);
+  border-radius: var(--base-radius);
+}
+
+.menu_logo {
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.menu_nav {
+  margin: 0;
+  margin-bottom: 50px;
+  padding: 0;
+  list-style-type: none;
+}
+
+.menu_nav li {
+  margin: 0;
+  padding: 14px 0 14px 80px;
+}
+
+.menu_nav li a {
+  color: var(--menu-link-color);
+  line-height: 21px;
+  font-weight: bold;
+}
+
+.menu_nav li:nth-child(1) {
+  background-image: url('/img/menu/left menu icon home.svg');
+  background-repeat: no-repeat;
+  background-position: top 6px left 44px;
+  background-size: 28px;
+}
+
+.menu_nav li:nth-child(2) {
+  background-image: url('/img/menu/left menu icon schedule.svg');
+  background-repeat: no-repeat;
+  background-position: top 6px left 44px;
+  background-size: 28px;
+}
+
+.menu_nav li:nth-child(3) {
+  background-image: url('/img/menu/left menu icon payment.svg');
+  background-repeat: no-repeat;
+  background-position: top 6px left 44px;
+  background-size: 28px;
+}
+
+.menu_nav li:nth-child(4) {
+  background-image: url('/img/menu/left menu icon achievements.svg');
+  background-repeat: no-repeat;
+  background-position: top 6px left 44px;
+  background-size: 28px;
+}
+
+.menu_nav li:nth-child(5) {
+  background-image: url('/img/menu/left menu icon trainings.svg');
+  background-repeat: no-repeat;
+  background-position: top 6px left 44px;
+  background-size: 28px;
+}
+
+.menu_nav li:nth-child(6) {
+  background-image: url('/img/menu/left menu icon library.svg');
+  background-repeat: no-repeat;
+  background-position: top 6px left 44px;
+  background-size: 28px;
+}
+
+.menu_nav li:nth-child(7) {
+  background-image: url('/img/menu/left menu icon connection.svg');
+  background-repeat: no-repeat;
+  background-position: top 6px left 44px;
+  background-size: 28px;
+}
+
+.menu_nav li:nth-child(8) {
+  background-image: url('/img/menu/left menu icon settings.svg');
+  background-repeat: no-repeat;
+  background-position: top 6px left 44px;
+  background-size: 28px;
+}
+
+.menu_nav li:nth-child(9) {
+  background-image: url('/img/menu/left menu icon questions.svg');
+  background-repeat: no-repeat;
+  background-position: top 6px left 44px;
+  background-size: 28px;
+}
+
+.menu_adv_banner {
+  background-color: var(--main-bg);
+  border-radius: var(--md-radius);
+  margin: 0 0 0 20px;
+  padding: 16px 16px 10px;
+  background-image: url('/img/menu/gift illustration.svg');
+  background-repeat: no-repeat;
+  background-position: bottom right;
+}
+
+.menu_adv_banner_title {
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+}
+
+.menu_adv_banner_content {
+  margin: 0;
+  padding: 4px 0 10px;
+  font-size: 10px;
+}
+
+.menu_adv_banner_button {
+  margin: 0;
+  padding: 8px 16px;
+  background-color: var(--secondary-button-bg);
+  border: none;
+  border-radius: var(--md-radius);
+  font-size: 12px;
+  &:hover {
+    cursor: pointer;
+  }
+}
