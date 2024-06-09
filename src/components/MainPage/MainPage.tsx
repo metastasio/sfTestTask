@@ -10,6 +10,8 @@ export const MainPage = () => {
   const [minutes, setMinutes] = useState(0);
   const [seconds, setSeconds] = useState(0);
 
+  // https://dev.to/yuridevat/how-to-create-a-timer-with-react-7b9
+
   useEffect(() => {
     (days > 0 || hours > 0 || minutes > 0 || seconds > 0) &&
       setTimeout(() => {
@@ -26,9 +28,6 @@ export const MainPage = () => {
           setHours(23);
           setDays(days - 1);
         }
-        // if (days === 0 && hours === 0 && minutes === 0 && seconds === 0) {
-
-        // }
       }, 1000);
   }, [seconds, minutes, hours, days]);
 
@@ -99,14 +98,14 @@ export const MainPage = () => {
               <p className='main_upcoming_lessons_name'>
                 Ментальная Арифметика
               </p>
-              <div className='main_upcoming_lessons_details'>
+              {/* <div className='main_upcoming_lessons_details'> */}
                 <p className='main_upcoming_lessons_details_time'>
                   14:00-14:25
                 </p>
                 <p className='main_upcoming_lessons_details_name'>
                   Белкина Инна
                 </p>
-              </div>
+              {/* </div> */}
               <div className='main_upcoming_lessons_buttons'>
                 <button>Button</button>
                 <button className='active'>Button</button>

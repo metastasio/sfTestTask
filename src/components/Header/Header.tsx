@@ -8,10 +8,11 @@ export const Header = () => {
   const { userName } = useAppSelector((state) => state.user);
   const dispatch = useAppDispatch();
 
+  //ПЕРЕДАТЬ В РЕБЕНКА
   const handleToggle = () => {
     dispatch(toggleProfile());
   };
-  
+
   return (
     <header className='header'>
       <h2 className='header_title'>

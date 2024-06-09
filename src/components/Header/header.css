@@ -36,10 +36,10 @@
 
 .header_profile img {
   display: block;
- object-fit: contain;
-    max-width: 100%;
-    object-position: center;
-    border-radius: 50%;
+  object-fit: cover;
+  aspect-ratio: 1;
+  max-width: 100%;
+  border-radius: inherit;
 }
 
 .header_msg {
