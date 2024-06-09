@@ -9,11 +9,13 @@
   --bg-yellow: #fff1cb;
   --bg-lightblue: #d8ecff;
   --bg-lightviolet: #e8cbff;
+  --bg-lightpurple: #decfff;
   --white: #ffffff;
   --table-inactive-bg: #fbfbfc;
   --menu-fc: #434b74;
   --accent: #e84849;
   --main-border-color: #8d7fc7;
+  --secondary-border: #eeeeff;
 
   --main-font: #323854;
   --secondary-font: #79747f;
@@ -73,4 +75,8 @@ h2 {
   font-size: 24px;
   font-weight: bold;
   line-height: 24px;
+}
+
+button {
+  font-family: var(--ff-main);
 }
