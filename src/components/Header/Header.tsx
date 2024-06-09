@@ -1,9 +1,17 @@
-import { useAppSelector } from '../../store/hooks';
+import { useAppDispatch, useAppSelector } from '../../store/hooks';
+import { toggleProfile } from '../../store/userSlice';
+import { Profile } from '../Profile/Profile';
 
 import './header.css';
 
 export const Header = () => {
   const { userName } = useAppSelector((state) => state.user);
+  const dispatch = useAppDispatch();
+
+  const handleToggle = () => {
+    dispatch(toggleProfile());
+  };
+  
   return (
     <header className='header'>
       <h2 className='header_title'>
@@ -14,11 +22,15 @@ export const Header = () => {
           <div className='header_unread_msg'>2</div>
           <img src='/img/Messages, Chat.svg' alt='Непрочитанные сообщения' />
         </button>
-        <button className='header_profile'>
+        <button className='header_profile' onClick={handleToggle}>
           <img src='/img/avatar.jpg' alt='Ваш профиль' />
         </button>
-        <button className='header_profile_expand'></button>
+        <button
+          className='header_profile_expand'
+          onClick={handleToggle}
+        ></button>
       </div>
+      <Profile />
     </header>
   );
 };

@@ -5,6 +5,7 @@ type InitialState = {
   email: FormDataEntryValue | null;
   userName: string;
   error: string | null;
+  isProfileClosed: boolean;
 };
 
 const initialState: InitialState = {
@@ -12,6 +13,7 @@ const initialState: InitialState = {
   email: null,
   userName: '',
   error: null,
+  isProfileClosed: true,
 };
 
 const userSlice = createSlice({
@@ -19,14 +21,24 @@ const userSlice = createSlice({
   initialState,
   reducers: {
     logIn(state, { payload }: PayloadAction<FormDataEntryValue>) {
-      console.log(payload);
       state.signedIn = true;
       state.email = payload;
       state.userName = 'Михаил';
       state.error = null;
     },
+    logOut(state) {
+      state.signedIn = false;
+      state.email = null;
+      state.userName = '';
+      state.error = null;
+      state.isProfileClosed = true;
+    },
+
+    toggleProfile(state) {
+      state.isProfileClosed = state.isProfileClosed ? false : true;
+    },
   },
 });
-export const { logIn } = userSlice.actions;
+export const { logIn, logOut, toggleProfile } = userSlice.actions;
 
 export default userSlice.reducer;

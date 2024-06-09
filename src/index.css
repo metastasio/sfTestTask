@@ -79,4 +79,7 @@ h2 {
 
 button {
   font-family: var(--ff-main);
+  &:hover {
+    cursor: pointer;
+  }
 }
