@@ -1,9 +1,37 @@
+import { useEffect, useState } from 'react';
 import { Header } from '../Header/Header';
 import { MainMenu } from '../MainMenu/MainMenu';
 
 import './mainpage.css';
 
 export const MainPage = () => {
+  const [days, setDays] = useState(6);
+  const [hours, setHours] = useState(0);
+  const [minutes, setMinutes] = useState(0);
+  const [seconds, setSeconds] = useState(0);
+
+  useEffect(() => {
+    (days > 0 || hours > 0 || minutes > 0 || seconds > 0) &&
+      setTimeout(() => {
+        setSeconds(seconds - 1);
+        if (seconds === 0) {
+          setMinutes(minutes - 1);
+          setSeconds(59);
+        }
+        if (minutes === 0) {
+          setHours(hours - 1);
+          setMinutes(59);
+        }
+        if (hours === 0) {
+          setHours(23);
+          setDays(days - 1);
+        }
+        // if (days === 0 && hours === 0 && minutes === 0 && seconds === 0) {
+
+        // }
+      }, 1000);
+  }, [seconds, minutes, hours, days]);
+
   return (
     <>
       <Header />
@@ -23,7 +51,15 @@ export const MainPage = () => {
           <p className='main_next_lesson_title'>
             Следующее занятие начнется через:
           </p>
-          <p className='main_next_lesson_timer'>SET TIMER!!</p>
+          <p className='main_next_lesson_timer'>
+            {days}
+            <span className='main_next_lesson_timer_unit'>д</span>
+            {hours}
+            <span className='main_next_lesson_timer_unit'>ч</span>
+            {minutes}
+            <span className='main_next_lesson_timer_unit'>мин</span>:
+            <span>{seconds}</span>
+          </p>
           <button className='main_next_lesson_button'>Button</button>
         </section>
 

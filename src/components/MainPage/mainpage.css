@@ -59,6 +59,17 @@
   line-height: 36px;
 }
 
+.main_next_lesson_timer_unit {
+  font-size: 15px;
+  line-height: 20px;
+  margin-left: 4px;
+}
+
+.main_next_lesson_timer_unit:nth-child(1),
+.main_next_lesson_timer_unit:nth-child(2) {
+  margin-right: 12px;
+}
+
 .main_next_lesson_button {
   width: 220px;
   margin: 0;

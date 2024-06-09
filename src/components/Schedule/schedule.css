@@ -1,0 +1,8 @@
+.schedule {
+  margin: -726px 0 0 236px;
+  padding: 0 50px 0 32px;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(5, auto);
+  gap: 20px;
+}

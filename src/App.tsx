@@ -1,7 +1,7 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { LogInPage } from './components/Login/LogInPage';
 import { MainPage } from './components/MainPage/MainPage';
-import { SchedulePage } from './components/SchedulePage';
+import { SchedulePage } from './components/Schedule/SchedulePage';
 import { NotFound } from './components/NotFound';
 
 import './App.css';
