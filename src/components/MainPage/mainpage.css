@@ -169,16 +169,15 @@
 }
 
 .main_upcoming_lessons_list li {
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: space-between;
-  align-items: center;
-  align-content: center;
   padding: 20px 0;
   font-size: 16px;
   line-height: 20px;
   font-weight: bold;
   border-bottom: 1px solid var(--secondary-border);
+
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  gap: 20px;
 }
 
 .main_upcoming_lessons_day {
@@ -187,6 +186,8 @@
   font-size: 32px;
   line-height: 32px;
   text-align: center;
+
+  grid-column: span 1;
 }
 
 .main_upcoming_lessons_month {
@@ -200,12 +201,16 @@
 .main_upcoming_lessons_name {
   margin: 0;
   padding: 0;
+
+  grid-column: span 3;
 }
 
 .main_upcoming_lessons_details {
   display: flex;
   flex-flow: row wrap;
   gap: 20px;
+
+  grid-column: span 4;
 }
 
 .main_upcoming_lessons_details_time,
@@ -216,12 +221,14 @@
   line-height: 12px;
   font-weight: 400;
 }
+
 .main_upcoming_lessons_details_name {
   font-weight: 300;
 }
 
 .main_upcoming_lessons_buttons {
   margin-right: 40px;
+  grid-column: span 2;
 }
 
 .main_upcoming_lessons_buttons button {
@@ -240,4 +247,19 @@
 .main_upcoming_lessons_buttons button.active {
   background-color: var(--button-bg-color);
   color: var(--white);
+}
+
+.main_upcoming_lessons_button_wrapper {
+  padding: 0 154px;
+}
+
+.main_upcoming_lessons_button {
+  margin: 0;
+  padding: 10px;
+  width: 100%;
+  background-color: var(--bg-lightpurple);
+  border: none;
+  border-radius: var(--base-radius);
+  font-size: 16px;
+  font-weight: bold;
 }

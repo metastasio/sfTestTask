@@ -113,6 +113,9 @@ export const MainPage = () => {
               </div>
             </li>
           </ul>
+          <div className='main_upcoming_lessons_button_wrapper'>
+            <button className='main_upcoming_lessons_button'>Button</button>
+          </div>
         </section>
       </main>
     </>
