@@ -4,13 +4,16 @@
 }
 
 :root {
-  --main-bg: #FDFDFF;
+  --main-bg: #fdfdff;
   --secondary-bg: #eeeeff;
-  --adv-bg: #fff1cb;
+  --bg-yellow: #fff1cb;
+  --bg-lightblue: #d8ecff;
+  --bg-lightviolet: #e8cbff;
   --white: #ffffff;
   --table-inactive-bg: #fbfbfc;
   --menu-fc: #434b74;
-  --accent: #E84849;
+  --accent: #e84849;
+  --main-border-color: #8d7fc7;
 
   --main-font: #323854;
   --secondary-font: #79747f;
@@ -18,7 +21,6 @@
   --menu-link-color: #434b74;
   --link-font-color: #008aff;
   --button-bg-color: #8d7fc7;
-  --secondary-button-bg: #d8ecff;
   --third-color: #7362bc;
   --border-color: #ececec;
 
@@ -63,4 +65,12 @@ body {
 a {
   text-decoration: none;
   color: var(--link-font-color);
+}
+
+h2 {
+  margin: 0;
+  padding: 0;
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 24px;
 }

@@ -4,6 +4,7 @@
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   grid-template-rows: repeat(5, auto);
+  gap: 20px;
 }
 
 .main_page_adv1 {
@@ -31,4 +32,81 @@
   padding: 0;
   font-weight: 300;
   line-height: 20px;
+}
+
+.main_next_lesson {
+  background-color: var(--bg-yellow);
+  border-radius: var(--base-radius);
+  grid-column: span 4;
+  grid-row: span 2;
+  padding: 32px 0;
+  text-align: center;
+}
+
+.main_next_lesson_title {
+  margin: 0;
+  padding: 0;
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 20px;
+}
+
+.main_next_lesson_timer {
+  margin: 0;
+  padding: 32px 0;
+  font-size: 36px;
+  font-weight: bold;
+  line-height: 36px;
+}
+
+.main_next_lesson_button {
+  width: 220px;
+  margin: 0;
+  padding: 12px 0;
+  background-color: transparent;
+  border: 1px dashed var(--main-font);
+  border-radius: var(--base-radius);
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 21.6px;
+  font-family: var(--ff-main);
+
+  /* background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='30' ry='30' stroke='%23333' stroke-width='4' stroke-dasharray='8' stroke-dashoffset='0' stroke-linecap='square'/%3e%3c/svg%3e");
+  border-top-width: 1px;
+  border-right-width: 1px;
+  border-bottom-width: 1px;
+  border-left-width: 1px; */
+}
+
+.main_hometask {
+  grid-column: span 2;
+  grid-row: span 1;
+  padding: 16px;
+  background-color: var(--bg-lightblue);
+  border-radius: var(--base-radius);
+  font-size: 20px;
+  font-weight: bold;
+  background-image: url('/img/icon-hometask.svg');
+  background-repeat: no-repeat;
+  background-position: right 16px bottom 16px;
+}
+
+.main_teachers_report {
+  grid-column: span 2;
+  grid-row: span 1;
+  padding: 16px;
+  background-color: var(--bg-lightviolet);
+  border-radius: var(--base-radius);
+  font-size: 20px;
+  font-weight: bold;
+  background-image: url('/img/icon-reports.svg');
+  background-repeat: no-repeat;
+  background-position: right 16px bottom 16px;
+}
+
+.main_remaining_lessons {
+  grid-column: span 4;
+  padding: 28px 28px 30px;
+  border: 1px solid var(--main-border-color);
+  border-radius: var(--base-radius);
 }
