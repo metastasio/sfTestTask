@@ -16,15 +16,22 @@
   --accent: #e84849;
   --main-border-color: #8d7fc7;
   --secondary-border: #eeeeff;
+  --upcoming-lesson-bg: #d7f0d6;
+  --todays-lesson1-bg: #eeeeff;
+  --todays-lesson2-bg: #f5f5f5;
 
   --main-font: #323854;
   --secondary-font: #79747f;
+  --inactive-month: #c8c5cd;
 
   --menu-link-color: #434b74;
   --link-font-color: #008aff;
   --button-bg-color: #8d7fc7;
   --third-color: #7362bc;
   --border-color: #ececec;
+  --complete-lesson-border: #22782b;
+  --todays-lesson1-border: #decfff;
+  --todays-lesson2-border: #c8c5cd;
 
   --ff-main: 'Circe Rounded', sans-serif;
   --base-radius: 30px;

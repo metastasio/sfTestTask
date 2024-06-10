@@ -9,10 +9,316 @@ export const SchedulePage = () => {
       <MainMenu />
       <main className='schedule'>
         <section className='schedule_choose_lesson'>
-          <div className='schedule_choose_lesson_select'></div>
+          <label className='sr_only' htmlFor='lessons'>
+            Выбрать предмет
+          </label>
+          <select
+            className='schedule_choose_lesson_select'
+            name='lessons'
+            id='lessons'
+          >
+            <option value=''>Выбрать предмет</option>
+            <option value='dog'>Ментальная арифметика</option>
+            <option value='cat'>Программирование</option>
+            <option value='hamster'>Скорочтение</option>
+          </select>
+
           <button className='schedule_choose_lesson_button'>
             Изменить расписание
           </button>
+        </section>
+
+        <div className='schedule_calendar_header_nav'>
+          <button className='schedule_calendar_header_prev'></button>
+          <p className='schedule_calendar_header_currernt'>Март 2024</p>
+          <button className='schedule_calendar_header_next'></button>
+        </div>
+        <button className='schedule_calendar_header_today'>Сегодня</button>
+        <button className='schedule_calendar_header_info'></button>
+
+        <section className='schedule_calendar_wrapper'>
+          <div className='schedule_calendar_header'>
+            <div className='schedule_calendar_weekday'>Пн</div>
+            <div>Вт</div>
+            <div>Ср</div>
+            <div>Чт</div>
+            <div>Пт</div>
+            <div>Сб</div>
+            <div>Вс</div>
+          </div>
+          <div className='schedule_calendar_week'>
+            <div className='schedule_calendar_day inactive_month'>
+              <p className='schedule_calendar_day_date'>26</p>
+            </div>
+            <div className='schedule_calendar_day inactive_month'>
+              <p className='schedule_calendar_day_date'>27</p>
+              <div className='schedule_calendar_day_lesson complete'>
+                <p className='schedule_calendar_day_lesson_time'>13:00-13:45</p>
+                <p className='schedule_calendar_day_lesson_title'>
+                  Ментальная арифметика
+                </p>
+              </div>
+              <div className='schedule_calendar_day_lesson complete'>
+                <p className='schedule_calendar_day_lesson_time'>13:00-13:45</p>
+                <p className='schedule_calendar_day_lesson_title'>
+                  Ментальная арифметика
+                </p>
+              </div>
+            </div>
+            <div className='schedule_calendar_day inactive_month'>
+              <p className='schedule_calendar_day_date'>28</p>
+              <div className='schedule_calendar_day_lesson crossedout'>
+                <p className='schedule_calendar_day_lesson_time'>13:00-13:45</p>
+                <p className='schedule_calendar_day_lesson_title'>
+                  Ментальная арифметика
+                </p>
+              </div>
+              <div className='schedule_calendar_day_lesson crossedout'>
+                <p className='schedule_calendar_day_lesson_time'>13:00-13:45</p>
+                <p className='schedule_calendar_day_lesson_title'>
+                  Ментальная арифметика
+                </p>
+              </div>
+            </div>
+            <div className='schedule_calendar_day inactive_month'>
+              <p className='schedule_calendar_day_date'>29</p>
+              <div className='schedule_calendar_day_lesson unpaid'>
+                <p className='schedule_calendar_day_lesson_time'>13:00-13:45</p>
+                <p className='schedule_calendar_day_lesson_title'>
+                  Ментальная арифметика
+                </p>
+              </div>
+              <div className='schedule_calendar_day_lesson unpaid'>
+                <p className='schedule_calendar_day_lesson_time'>13:00-13:45</p>
+                <p className='schedule_calendar_day_lesson_title'>
+                  Ментальная арифметика
+                </p>
+              </div>
+            </div>
+            <div className='schedule_calendar_day'>
+              <p className='schedule_calendar_day_date'>1</p>
+              <div className='schedule_calendar_day_lesson todays1'>
+                <p className='schedule_calendar_day_lesson_time'>13:00-13:45</p>
+                <p className='schedule_calendar_day_lesson_title'>
+                  Ментальная арифметика
+                </p>
+              </div>
+              <div className='schedule_calendar_day_lesson todays2'>
+                <p className='schedule_calendar_day_lesson_time'>13:00-13:45</p>
+                <p className='schedule_calendar_day_lesson_title'>
+                  Ментальная арифметика
+                </p>
+              </div>
+            </div>
+            <div className='schedule_calendar_day weekend'>
+              <p className='schedule_calendar_day_date'>2</p>
+              <div className='schedule_calendar_day_lesson upcoming unpaid'>
+                <p className='schedule_calendar_day_lesson_time'>13:00-13:45</p>
+                <p className='schedule_calendar_day_lesson_title'>
+                  Ментальная арифметика
+                </p>
+              </div>
+              <div className='schedule_calendar_day_lesson upcoming unpaid'>
+                <p className='schedule_calendar_day_lesson_time'>13:00-13:45</p>
+                <p className='schedule_calendar_day_lesson_title'>
+                  Ментальная арифметика
+                </p>
+              </div>
+            </div>
+            <div className='schedule_calendar_day weekend'>
+              <p className='schedule_calendar_day_date'>3</p>
+              <div className='schedule_calendar_day_lesson upcoming'>
+                <p className='schedule_calendar_day_lesson_time'>13:00-13:45</p>
+                <p className='schedule_calendar_day_lesson_title'>
+                  Ментальная арифметика
+                </p>
+              </div>
+              <div className='schedule_calendar_day_lesson upcoming'>
+                <p className='schedule_calendar_day_lesson_time'>13:00-13:45</p>
+                <p className='schedule_calendar_day_lesson_title'>
+                  Ментальная арифметика
+                </p>
+              </div>
+            </div>
+          </div>
+          <div className='schedule_calendar_week'>
+            <div className='schedule_calendar_day'>
+              <p className='schedule_calendar_day_date'>4</p>
+              <div className='schedule_calendar_day_lesson'>
+                <p className='schedule_calendar_day_lesson_time'></p>
+                <p className='schedule_calendar_day_lesson_title'></p>
+              </div>
+              <div className='schedule_calendar_day_lesson upcoming unpaid'>
+                <p className='schedule_calendar_day_lesson_time'>13:00-13:45</p>
+                <p className='schedule_calendar_day_lesson_title'>
+                  Ментальная арифметика
+                </p>
+              </div>
+            </div>
+            <div className='schedule_calendar_day'>
+              <p className='schedule_calendar_day_date'>5</p>
+            </div>
+            <div className='schedule_calendar_day'>
+              <p className='schedule_calendar_day_date'>6</p>
+              <div className='schedule_calendar_day_lesson'>
+                <p className='schedule_calendar_day_lesson_time'></p>
+                <p className='schedule_calendar_day_lesson_title'></p>
+              </div>
+              <div className='schedule_calendar_day_lesson upcoming unpaid'>
+                <p className='schedule_calendar_day_lesson_time'>13:00-13:45</p>
+                <p className='schedule_calendar_day_lesson_title'>
+                  Ментальная арифметика
+                </p>
+              </div>
+            </div>
+            <div className='schedule_calendar_day'>
+              <p className='schedule_calendar_day_date'>7</p>
+            </div>
+            <div className='schedule_calendar_day'>
+              <p className='schedule_calendar_day_date'>8</p>
+              <div className='schedule_calendar_day_lesson'>
+                <p className='schedule_calendar_day_lesson_time'></p>
+                <p className='schedule_calendar_day_lesson_title'></p>
+              </div>
+              <div className='schedule_calendar_day_lesson upcoming unpaid'>
+                <p className='schedule_calendar_day_lesson_time upcoming'>
+                  13:00-13:45
+                </p>
+                <p className='schedule_calendar_day_lesson_title'>
+                  Ментальная арифметика
+                </p>
+              </div>
+            </div>
+            <div className='schedule_calendar_day weekend'>
+              <p className='schedule_calendar_day_date'>9</p>
+            </div>
+            <div className='schedule_calendar_day weekend'>
+              <p className='schedule_calendar_day_date'>10</p>
+            </div>
+          </div>
+          <div className='schedule_calendar_week'>
+            <div className='schedule_calendar_day'>
+              <p className='schedule_calendar_day_date'>11</p>
+            </div>
+            <div className='schedule_calendar_day'>
+              <p className='schedule_calendar_day_date'>12</p>
+            </div>
+            <div className='schedule_calendar_day'>
+              <p className='schedule_calendar_day_date'>13</p>
+            </div>
+            <div className='schedule_calendar_day'>
+              <p className='schedule_calendar_day_date'>14</p>
+              <div className='schedule_calendar_day_lesson'>
+                <p className='schedule_calendar_day_lesson_time'></p>
+                <p className='schedule_calendar_day_lesson_title'></p>
+              </div>
+              <div className='schedule_calendar_day_lesson upcoming unpaid'>
+                <p className='schedule_calendar_day_lesson_time'>13:00-13:45</p>
+                <p className='schedule_calendar_day_lesson_title'>
+                  Ментальная арифметика
+                </p>
+              </div>
+            </div>
+            <div className='schedule_calendar_day'>
+              <p className='schedule_calendar_day_date'>15</p>
+            </div>
+            <div className='schedule_calendar_day weekend'>
+              <p className='schedule_calendar_day_date'>16</p>
+              <div className='schedule_calendar_day_lesson'>
+                <p className='schedule_calendar_day_lesson_time'></p>
+                <p className='schedule_calendar_day_lesson_title'></p>
+              </div>
+              <div className='schedule_calendar_day_lesson upcoming unpaid'>
+                <p className='schedule_calendar_day_lesson_time'>13:00-13:45</p>
+                <p className='schedule_calendar_day_lesson_title'>
+                  Ментальная арифметика
+                </p>
+              </div>
+            </div>
+            <div className='schedule_calendar_day weekend'>
+              <p className='schedule_calendar_day_date'>17</p>
+            </div>
+          </div>
+          <div className='schedule_calendar_week'>
+            <div className='schedule_calendar_day'>
+              <p className='schedule_calendar_day_date'>18</p>
+              <div className='schedule_calendar_day_lesson upcoming unpaid'>
+                <p className='schedule_calendar_day_lesson_time'>13:00-13:45</p>
+                <p className='schedule_calendar_day_lesson_title'>
+                  Ментальная арифметика
+                </p>
+              </div>
+              <div className='schedule_calendar_day_lesson upcoming unpaid'>
+                <p className='schedule_calendar_day_lesson_time'>13:00-13:45</p>
+                <p className='schedule_calendar_day_lesson_title'>
+                  Ментальная арифметика
+                </p>
+              </div>
+            </div>
+            <div className='schedule_calendar_day'>
+              <p className='schedule_calendar_day_date'>19</p>
+            </div>
+            <div className='schedule_calendar_day'>
+              <p className='schedule_calendar_day_date'>20</p>
+            </div>
+            <div className='schedule_calendar_day'>
+              <p className='schedule_calendar_day_date'>21</p>
+            </div>
+            <div className='schedule_calendar_day'>
+              <p className='schedule_calendar_day_date'>22</p>
+            </div>
+            <div className='schedule_calendar_day weekend'>
+              <p className='schedule_calendar_day_date'>23</p>
+              <div className='schedule_calendar_day_lesson'>
+                <p className='schedule_calendar_day_lesson_time'></p>
+                <p className='schedule_calendar_day_lesson_title'></p>
+              </div>
+              <div className='schedule_calendar_day_lesson upcoming unpaid'>
+                <p className='schedule_calendar_day_lesson_time'>13:00-13:45</p>
+                <p className='schedule_calendar_day_lesson_title'>
+                  Ментальная арифметика
+                </p>
+              </div>
+            </div>
+            <div className='schedule_calendar_day weekend'>
+              <p className='schedule_calendar_day_date'>24</p>
+            </div>
+          </div>
+          <div className='schedule_calendar_week last'>
+            <div className='schedule_calendar_day'>
+              <p className='schedule_calendar_day_date'>25</p>
+            </div>
+            <div className='schedule_calendar_day'>
+              <p className='schedule_calendar_day_date'>26</p>
+            </div>
+            <div className='schedule_calendar_day'>
+              <p className='schedule_calendar_day_date'>27</p>
+            </div>
+            <div className='schedule_calendar_day'>
+              <p className='schedule_calendar_day_date'>28</p>
+            </div>
+            <div className='schedule_calendar_day'>
+              <p className='schedule_calendar_day_date'>29</p>
+            </div>
+            <div className='schedule_calendar_day weekend'>
+              <p className='schedule_calendar_day_date'>30</p>
+            </div>
+            <div className='schedule_calendar_day weekend'>
+              <p className='schedule_calendar_day_date'>31</p>
+              <div className='schedule_calendar_day_lesson upcoming unpaid'>
+                <p className='schedule_calendar_day_lesson_time'>13:00-13:45</p>
+                <p className='schedule_calendar_day_lesson_title'>
+                  Ментальная арифметика
+                </p>
+              </div>
+              <div className='schedule_calendar_day_lesson upcoming'>
+                <p className='schedule_calendar_day_lesson_time'>13:00-13:45</p>
+                <p className='schedule_calendar_day_lesson_title'>
+                  Ментальная арифметика
+                </p>
+              </div>
+            </div>
+          </div>
         </section>
       </main>
     </>
