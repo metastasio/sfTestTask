@@ -1,6 +1,6 @@
 .menu {
   max-width: 236px;
-  margin-top: -40px;
+  margin-top: -44px;
   padding: 44px 20px 24px 0;
   background-color: var(--secondary-bg);
   border-radius: var(--base-radius);
@@ -8,9 +8,7 @@
 
 .menu_logo {
   display: block;
-  margin: 0 auto;
-  margin-bottom: 40px;
-  text-align: center;
+  margin: 0 44px 40px;
 }
 
 .menu_nav {
@@ -22,7 +20,9 @@
 
 .menu_nav li {
   margin: 0;
-  padding: 14px 0 14px 80px;
+  height: 40px;
+  padding: 10px 0 14.5px 76px;
+  font-weight: bold;
 }
 
 .menu_nav li a {
@@ -34,63 +34,63 @@
 .menu_nav li:nth-child(1) {
   background-image: url('/img/menu/left menu icon home.svg');
   background-repeat: no-repeat;
-  background-position: top 6px left 44px;
+  background-position: top 6px left 42px;
   background-size: 28px;
 }
 
 .menu_nav li:nth-child(2) {
   background-image: url('/img/menu/left menu icon schedule.svg');
   background-repeat: no-repeat;
-  background-position: top 6px left 44px;
+  background-position: top 6px left 42px;
   background-size: 28px;
 }
 
 .menu_nav li:nth-child(3) {
   background-image: url('/img/menu/left menu icon payment.svg');
   background-repeat: no-repeat;
-  background-position: top 6px left 44px;
+  background-position: top 6px left 42px;
   background-size: 28px;
 }
 
 .menu_nav li:nth-child(4) {
   background-image: url('/img/menu/left menu icon achievements.svg');
   background-repeat: no-repeat;
-  background-position: top 6px left 44px;
+  background-position: top 6px left 42px;
   background-size: 28px;
 }
 
 .menu_nav li:nth-child(5) {
   background-image: url('/img/menu/left menu icon trainings.svg');
   background-repeat: no-repeat;
-  background-position: top 6px left 44px;
+  background-position: top 6px left 42px;
   background-size: 28px;
 }
 
 .menu_nav li:nth-child(6) {
   background-image: url('/img/menu/left menu icon library.svg');
   background-repeat: no-repeat;
-  background-position: top 6px left 44px;
+  background-position: top 6px left 42px;
   background-size: 28px;
 }
 
 .menu_nav li:nth-child(7) {
   background-image: url('/img/menu/left menu icon connection.svg');
   background-repeat: no-repeat;
-  background-position: top 6px left 44px;
+  background-position: top 6px left 42px;
   background-size: 28px;
 }
 
 .menu_nav li:nth-child(8) {
   background-image: url('/img/menu/left menu icon settings.svg');
   background-repeat: no-repeat;
-  background-position: top 6px left 44px;
+  background-position: top 6px left 42px;
   background-size: 28px;
 }
 
 .menu_nav li:nth-child(9) {
   background-image: url('/img/menu/left menu icon questions.svg');
   background-repeat: no-repeat;
-  background-position: top 6px left 44px;
+  background-position: top 6px left 42px;
   background-size: 28px;
 }
 
