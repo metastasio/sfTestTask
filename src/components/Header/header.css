@@ -2,9 +2,9 @@
   background-color: var(--main-bg);
   margin-left: 236px;
   padding: 12px 50px 12px 32px;
-  max-height: 68px;
-  border-bottom-left-radius: var(--base-radius);
-  border-bottom-right-radius: var(--base-radius);
+  height: 68px;
+  border-bottom-left-radius: 24px;
+  border-bottom-right-radius: 24px;
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
@@ -20,7 +20,6 @@
 .header_personal {
   display: flex;
   flex-flow: row wrap;
-  gap: 16px;
 }
 
 .header_msg,
@@ -47,6 +46,7 @@
   background-image: url('/img/Messages, Chat.svg');
   background-repeat: no-repeat;
   background-position: center center;
+  margin-right: 16px;
 }
 
 .header_unread_msg {
@@ -61,8 +61,8 @@
   font-weight: bold;
   text-align: center;
   z-index: 10;
-  right: -4px;
-  top: -6px;
+  right: -5px;
+  top: -4px;
 }
 
 .header_profile_expand {
@@ -72,5 +72,6 @@
   background-color: transparent;
   background-image: url('/img/arrow.svg');
   background-repeat: no-repeat;
-  background-position: center center;
+  background-position: center top 20px;
+  background-size: 8px 4px;
 }
