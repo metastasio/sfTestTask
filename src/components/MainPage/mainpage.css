@@ -187,8 +187,9 @@
   border-bottom: 1px solid var(--secondary-border);
 
   display: grid;
-  grid-template-columns: repeat(10, 1fr);
-  gap: 20px;
+  grid-template-columns: 42px minmax(150px, 180px) 70px minmax(120px, 140px) 122px;
+  gap: 5px;
+  align-content: start;
 }
 
 .main_upcoming_lessons_day {
@@ -198,7 +199,7 @@
   line-height: 32px;
   text-align: center;
 
-  grid-column: span 1;
+  /* grid-column: span 1; */
 }
 
 .main_upcoming_lessons_month {
@@ -212,23 +213,24 @@
 .main_upcoming_lessons_name {
   margin: 0;
   padding: 0;
+  align-items: start;
 
-  grid-column: span 3;
+  /* grid-column: span 3; */
 }
 
-.main_upcoming_lessons_details {
+.main_upcoming_lessons_teacher {
   display: flex;
   flex-flow: row wrap;
-  gap: 20px;
-
-  grid-column: span 4;
+  gap: 2px;
+  align-items: center;
+  /* grid-column: span 4; */
 }
 
 .main_upcoming_lessons_details_time,
 .main_upcoming_lessons_details_name {
   margin: 0;
   padding: 0;
-  font-style: 12px;
+  font-size: 12px;
   line-height: 12px;
   font-weight: 400;
 }
@@ -237,10 +239,6 @@
   font-weight: 300;
 }
 
-.main_upcoming_lessons_buttons {
-  margin-right: 40px;
-  grid-column: span 2;
-}
 
 .main_upcoming_lessons_buttons button {
   margin: 0;
@@ -250,9 +248,10 @@
   border-radius: var(--md-radius);
   font-size: 12px;
   line-height: 16.2px;
+  width: 56px;
 }
 .main_upcoming_lessons_buttons button + button {
-  margin-left: 10px;
+  margin-left: 4px;
 }
 
 .main_upcoming_lessons_buttons button.active {

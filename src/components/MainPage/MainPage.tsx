@@ -5,31 +5,27 @@ import { MainMenu } from '../MainMenu/MainMenu';
 import './mainpage.css';
 
 export const MainPage = () => {
-  const [days, setDays] = useState(6);
+  const [days, setDays] = useState(1);
   const [hours, setHours] = useState(0);
   const [minutes, setMinutes] = useState(0);
   const [seconds, setSeconds] = useState(0);
 
-  // https://dev.to/yuridevat/how-to-create-a-timer-with-react-7b9
+  const deadline = 'August, 31, 2024';
+  const getTime = (deadline: string) => {
+    const time = Date.parse(deadline) - Date.now();
+    if (days > 0 || hours > 0 || minutes > 0 || seconds > 0) {
+      setDays(Math.floor(time / (1000 * 60 * 60 * 24)));
+      setHours(Math.floor((time / (1000 * 60 * 60)) % 24));
+      setMinutes(Math.floor((time / 1000 / 60) % 60));
+      setSeconds(Math.floor((time / 1000) % 60));
+    }
+  };
 
   useEffect(() => {
-    (days > 0 || hours > 0 || minutes > 0 || seconds > 0) &&
-      setTimeout(() => {
-        setSeconds(seconds - 1);
-        if (seconds === 0) {
-          setMinutes(minutes - 1);
-          setSeconds(59);
-        }
-        if (minutes === 0) {
-          setHours(hours - 1);
-          setMinutes(59);
-        }
-        if (hours === 0) {
-          setHours(23);
-          setDays(days - 1);
-        }
-      }, 1000);
-  }, [seconds, minutes, hours, days]);
+    const interval = setInterval(() => getTime(deadline), 1000);
+
+    return () => clearInterval(interval);
+  }, []);
 
   return (
     <>
@@ -98,14 +94,13 @@ export const MainPage = () => {
               <p className='main_upcoming_lessons_name'>
                 Ментальная Арифметика
               </p>
-              {/* <div className='main_upcoming_lessons_details'> */}
-                <p className='main_upcoming_lessons_details_time'>
-                  14:00-14:25
-                </p>
+              <p className='main_upcoming_lessons_details_time'>14:00-14:25</p>
+              <div className='main_upcoming_lessons_teacher'>
+                <img src='/img/icon.svg' />
                 <p className='main_upcoming_lessons_details_name'>
                   Белкина Инна
                 </p>
-              {/* </div> */}
+              </div>
               <div className='main_upcoming_lessons_buttons'>
                 <button>Button</button>
                 <button className='active'>Button</button>
@@ -117,14 +112,15 @@ export const MainPage = () => {
                 <p className='main_upcoming_lessons_month'>октября</p>
               </div>
               <p className='main_upcoming_lessons_name'>Программирование</p>
-              <div className='main_upcoming_lessons_details'>
-                <p className='main_upcoming_lessons_details_time'>
-                  11:00-11:11
-                </p>
+
+              <p className='main_upcoming_lessons_details_time'>11:00-11:11</p>
+              <div className='main_upcoming_lessons_teacher'>
+                <img src='/img/icon.svg' />
                 <p className='main_upcoming_lessons_details_name'>
                   Животновская Оксана
                 </p>
               </div>
+
               <div className='main_upcoming_lessons_buttons'>
                 <button>Button</button>
                 <button className='active'>Button</button>
@@ -136,12 +132,13 @@ export const MainPage = () => {
                 <p className='main_upcoming_lessons_month'>ноября</p>
               </div>
               <p className='main_upcoming_lessons_name'>Скорочтение</p>
-              <div className='main_upcoming_lessons_details'>
-                <p className='main_upcoming_lessons_details_time'>
-                  09:00-09:45
-                </p>
+
+              <p className='main_upcoming_lessons_details_time'>09:00-09:45</p>
+              <div className='main_upcoming_lessons_teacher'>
+                <img src='/img/icon.svg' />
                 <p className='main_upcoming_lessons_details_name'>Мин Елена</p>
               </div>
+
               <div className='main_upcoming_lessons_buttons'>
                 <button>Button</button>
                 <button className='active'>Button</button>
