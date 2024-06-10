@@ -7,7 +7,6 @@ export const SchedulePage = () => {
     <>
       <Header />
       <MainMenu />
-      <h1>This is Schedule</h1>
       <main className='schedule'>
         <section className='schedule_choose_lesson'>
           <div className='schedule_choose_lesson_select'></div>
