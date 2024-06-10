@@ -1,15 +1,13 @@
 .schedule {
-  margin: -723px 0 0 236px;
+  margin: -640px 0 0 236px;
   padding: 0 50px 0 32px;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   grid-template-rows: repeat(5, auto);
-  gap: 20px;
 }
 
 .schedule_choose_lesson {
   grid-column: span 12;
-  /* margin-bottom: 26px; */
 
   display: grid;
   grid-template-columns: repeat(12, 1fr);
@@ -48,15 +46,14 @@
 }
 
 .schedule_calendar_header_nav {
+  margin-top: 25px;
   grid-column: span 2;
   display: flex;
   flex-flow: row nowrap;
-  justify-content: space-between;
   font-weight: bold;
   line-height: 20px;
   align-items: center;
   align-content: center;
-  gap: 16px;
   height: 32px;
 }
 
@@ -72,14 +69,24 @@
 
 .schedule_calendar_header_prev {
   background-image: url('/img/schevron left.svg');
+  margin-right: 16px;
 }
 .schedule_calendar_header_next {
   background-image: url('/img/schevron right.svg');
+  margin-left: 16px;
+}
+
+.schedule_calendar_header_today_span {
+  grid-column: 3/5;
+  align-content: center;
+  padding-left: 8px;
+  margin-top: 24px;
 }
 
 .schedule_calendar_header_today {
   margin: 0;
-  padding: 0 16px;
+  margin-right: 16px;
+  padding: 8px 20px;
   background-color: transparent;
   border: 1px solid var(--main-border-color);
   border-radius: var(--md-radius);
@@ -87,19 +94,21 @@
 }
 
 .schedule_calendar_header_info {
-  margin: 4px 0;
   padding: 0;
   background-color: transparent;
   border: none;
+  padding: 10px;
   width: 24px;
   height: 24px;
   background-image: url('/img/info button.svg');
+  background-repeat: no-repeat;
 }
 
 .schedule_calendar_wrapper {
   grid-column: span 12;
   display: grid;
-  grid-template-rows: 24px repeat(5, 101px);
+  grid-template-rows: 20px repeat(5, 101px);
+  margin-top: 15px;
 }
 
 .schedule_calendar_header,
@@ -109,7 +118,12 @@
 }
 
 .schedule_calendar_header {
+  height: 20px;
+}
+
+.schedule_calendar_weekday {
   text-align: right;
+  padding-right: 4px;
 }
 
 .schedule_calendar_day {
@@ -118,7 +132,7 @@
   border-top: 1px solid var(--border-color);
   border-left: 1px solid var(--border-color);
   font-size: 12px;
-  padding: 4px;
+  padding: 2px 4px;
 }
 .schedule_calendar_day_date {
   margin: 0 0 10px 0;
@@ -145,7 +159,6 @@
   height: 34px;
   border-radius: 2px;
   padding: 4px;
-  /* border: 0.5px solid red; */
 }
 
 .schedule_calendar_day_lesson:last-child {

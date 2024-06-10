@@ -8,7 +8,7 @@
 
 .menu_logo {
   display: block;
-  margin: 0 44px 40px;
+  margin: 0 44px 42px;
 }
 
 .menu_nav {
@@ -20,30 +20,35 @@
 
 .menu_nav li {
   margin: 0;
-  height: 40px;
-  padding: 10px 0 14.5px 76px;
-  font-weight: bold;
+  padding: 6px 0 6px 44px;
+  border-top-right-radius: var(--base-radius);
+  border-bottom-right-radius: var(--base-radius);
+  line-height: 28px;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  gap: 8.5px;
 }
 
 .menu_nav li a {
   color: var(--menu-link-color);
-  line-height: 21px;
-  font-weight: bold;
+  font-size: 16px;
 }
+/* font: inherit; */
 
-.menu_nav li:nth-child(1) {
+/* .menu_nav li:nth-child(1) {
   background-image: url('/img/menu/left menu icon home.svg');
   background-repeat: no-repeat;
   background-position: top 6px left 42px;
   background-size: 28px;
-}
+} */
 
-.menu_nav li:nth-child(2) {
+/* .menu_nav li:nth-child(2) {
   background-image: url('/img/menu/left menu icon schedule.svg');
   background-repeat: no-repeat;
   background-position: top 6px left 42px;
   background-size: 28px;
-}
+} */
 
 .menu_nav li:nth-child(3) {
   background-image: url('/img/menu/left menu icon payment.svg');
@@ -127,4 +132,17 @@
   &:hover {
     cursor: pointer;
   }
+}
+
+.menu_nav li:has(.menu_nav_active) {
+  background-color: var(--button-bg-color);
+}
+.menu_nav li:has(.menu_nav_active) a,
+.menu_nav li:has(.menu_nav_active) svg path {
+  color: var(--white);
+  fill: var(--white);
+}
+
+.schedule_svg {
+  stroke: var(--white);
 }

@@ -33,18 +33,20 @@ export const SchedulePage = () => {
           <p className='schedule_calendar_header_currernt'>Март 2024</p>
           <button className='schedule_calendar_header_next'></button>
         </div>
-        <button className='schedule_calendar_header_today'>Сегодня</button>
-        <button className='schedule_calendar_header_info'></button>
+        <div className='schedule_calendar_header_today_span'>
+          <button className='schedule_calendar_header_today'>Сегодня</button>
+          <button className='schedule_calendar_header_info'></button>
+        </div>
 
         <section className='schedule_calendar_wrapper'>
           <div className='schedule_calendar_header'>
             <div className='schedule_calendar_weekday'>Пн</div>
-            <div>Вт</div>
-            <div>Ср</div>
-            <div>Чт</div>
-            <div>Пт</div>
-            <div>Сб</div>
-            <div>Вс</div>
+            <div className='schedule_calendar_weekday'>Вт</div>
+            <div className='schedule_calendar_weekday'>Ср</div>
+            <div className='schedule_calendar_weekday'>Чт</div>
+            <div className='schedule_calendar_weekday'>Пт</div>
+            <div className='schedule_calendar_weekday'>Сб</div>
+            <div className='schedule_calendar_weekday'>Вс</div>
           </div>
           <div className='schedule_calendar_week'>
             <div className='schedule_calendar_day inactive_month'>
