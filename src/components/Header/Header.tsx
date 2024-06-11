@@ -8,10 +8,14 @@ type HeaderProps = {
 };
 
 export const Header = (props: HeaderProps) => {
-  const [isProfileClosed, openProfile] = useState(true);
+  const [isOpen, setIsOpen] = useState(false);
 
   const toggleProfile = () => {
-    openProfile((prev) => !prev);
+    setIsOpen((prev) => !prev);
+  };
+
+  const closeProfile = () => {
+    setIsOpen(false);
   };
 
   return (
@@ -36,10 +40,13 @@ export const Header = (props: HeaderProps) => {
           onClick={toggleProfile}
         ></button>
       </div>
-      <Profile
-        isProfileClosed={isProfileClosed}
-        toggleProfile={toggleProfile}
-      />
+      {isOpen && (
+        <Profile
+          isProfileClosed={isOpen}
+          toggleProfile={toggleProfile}
+          closeProfile={closeProfile}
+        />
+      )}
     </header>
   );
 };

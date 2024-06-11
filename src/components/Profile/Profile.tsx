@@ -1,20 +1,20 @@
-import cn from 'classnames';
+// import cn from 'classnames';
 import { useAppDispatch, useAppSelector } from '../../store/hooks';
 import { logOut } from '../../store/userSlice';
 import './profile.css';
+import { useEffect, useRef } from 'react';
 
 type ProfileProps = {
   isProfileClosed: boolean;
   toggleProfile: () => void;
+  closeProfile: () => void;
 };
 
 export const Profile = (props: ProfileProps) => {
-  const { isProfileClosed, toggleProfile } = props;
+  const { toggleProfile, closeProfile } = props;
   const { userName } = useAppSelector((state) => state.user);
+  const profileRef = useRef(null);
   const dispatch = useAppDispatch();
-  const profileClassNames = cn('profile_wrapper', {
-    hidden: isProfileClosed,
-  });
 
   const handleClick = () => {
     dispatch(logOut());
@@ -24,8 +24,21 @@ export const Profile = (props: ProfileProps) => {
     toggleProfile();
   };
 
+  useEffect(() => {
+    const listener = (e: MouseEvent) => {
+      if (e.target !== profileRef?.current) {
+        closeProfile();
+      }
+    };
+    window.addEventListener('mousedown', listener);
+
+    return () => {
+      window.removeEventListener('mousedown', listener);
+    };
+  }, []);
+
   return (
-    <div className={profileClassNames}>
+    <div ref={profileRef} className='profile_wrapper'>
       <img className='profile_arrow' src='/img/arrow 2.svg' alt='' />
       <p className='profile_change_user'>Смена пользователя</p>
       <button className='profile_close' onClick={handleClose}></button>

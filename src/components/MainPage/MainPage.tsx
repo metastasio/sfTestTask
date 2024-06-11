@@ -97,7 +97,9 @@ export const MainPage = () => {
               <div className='main_remaining_lessons_count'>4</div>
             </li>
           </ul>
-          <button className='main_remaining_lessons_button'>Button</button>
+          <div className='main_remaining_lessons_button_wrapper'>
+            <button className='main_remaining_lessons_button'>Button</button>
+          </div>
         </section>
 
         <section className='main_upcoming_lessons'>
