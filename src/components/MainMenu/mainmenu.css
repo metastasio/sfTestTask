@@ -13,7 +13,7 @@
 
 .menu_nav {
   margin: 0;
-  margin-bottom: 50px;
+  margin-bottom: 48px;
   padding: 0;
   list-style-type: none;
 }
@@ -34,70 +34,6 @@
   color: var(--menu-link-color);
   font-size: 16px;
 }
-/* font: inherit; */
-
-/* .menu_nav li:nth-child(1) {
-  background-image: url('/img/menu/left menu icon home.svg');
-  background-repeat: no-repeat;
-  background-position: top 6px left 42px;
-  background-size: 28px;
-} */
-
-/* .menu_nav li:nth-child(2) {
-  background-image: url('/img/menu/left menu icon schedule.svg');
-  background-repeat: no-repeat;
-  background-position: top 6px left 42px;
-  background-size: 28px;
-} */
-
-.menu_nav li:nth-child(3) {
-  background-image: url('/img/menu/left menu icon payment.svg');
-  background-repeat: no-repeat;
-  background-position: top 6px left 42px;
-  background-size: 28px;
-}
-
-.menu_nav li:nth-child(4) {
-  background-image: url('/img/menu/left menu icon achievements.svg');
-  background-repeat: no-repeat;
-  background-position: top 6px left 42px;
-  background-size: 28px;
-}
-
-.menu_nav li:nth-child(5) {
-  background-image: url('/img/menu/left menu icon trainings.svg');
-  background-repeat: no-repeat;
-  background-position: top 6px left 42px;
-  background-size: 28px;
-}
-
-.menu_nav li:nth-child(6) {
-  background-image: url('/img/menu/left menu icon library.svg');
-  background-repeat: no-repeat;
-  background-position: top 6px left 42px;
-  background-size: 28px;
-}
-
-.menu_nav li:nth-child(7) {
-  background-image: url('/img/menu/left menu icon connection.svg');
-  background-repeat: no-repeat;
-  background-position: top 6px left 42px;
-  background-size: 28px;
-}
-
-.menu_nav li:nth-child(8) {
-  background-image: url('/img/menu/left menu icon settings.svg');
-  background-repeat: no-repeat;
-  background-position: top 6px left 42px;
-  background-size: 28px;
-}
-
-.menu_nav li:nth-child(9) {
-  background-image: url('/img/menu/left menu icon questions.svg');
-  background-repeat: no-repeat;
-  background-position: top 6px left 42px;
-  background-size: 28px;
-}
 
 .menu_adv_banner {
   background-color: var(--main-bg);
@@ -117,14 +53,14 @@
 
 .menu_adv_banner_content {
   margin: 0;
-  padding: 4px 0 10px;
+  padding: 4px 0 8px;
   font-size: 10px;
 }
 
 .menu_adv_banner_button {
   margin: 0;
   padding: 8px 16px;
-  background-color: var(--secondary-button-bg);
+  background-color: var(--bg-lightblue);
   border: none;
   border-radius: var(--md-radius);
   font-size: 12px;
