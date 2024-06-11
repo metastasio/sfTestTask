@@ -107,7 +107,6 @@
 
 .main_remaining_lessons {
   height: 372px;
-  width: 344px;
   grid-column: span 4;
   padding: 28px 28px 30px;
   border: 1px solid var(--main-border-color);
@@ -131,6 +130,7 @@
   flex-flow: row nowrap;
   justify-content: space-between;
   align-items: center;
+  gap: 10px;
   padding: 10px 0 16px;
   font-size: 16px;
   line-height: 20px;
