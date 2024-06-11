@@ -1,7 +1,7 @@
 import { useAppDispatch, useAppSelector } from '../../store/hooks';
 import { logOut } from '../../store/userSlice';
 import './profile.css';
-import { useEffect, useRef } from 'react';
+import { useEffect } from 'react';
 
 type ProfileProps = {
   openProfileRef: React.MutableRefObject<HTMLDivElement | null>;
@@ -12,7 +12,6 @@ type ProfileProps = {
 export const Profile = (props: ProfileProps) => {
   const { toggleProfile, closeProfile, openProfileRef } = props;
   const { userName } = useAppSelector((state) => state.user);
-  const profileRef = useRef(null);
   const dispatch = useAppDispatch();
 
   const handleClick = () => {
@@ -25,25 +24,19 @@ export const Profile = (props: ProfileProps) => {
 
   useEffect(() => {
     const listener = (e: MouseEvent) => {
-      e.stopPropagation();
-      console.log(e.target !== profileRef?.current, '1');
-      console.log(e.target !== openProfileRef?.current, '2');
-      if (
-        e.target !== profileRef?.current ||
-        e.target !== openProfileRef?.current
-      ) {
+      if (!openProfileRef?.current?.contains(e.target as Node)) {
         closeProfile();
       }
     };
-    window.addEventListener('mousedown', listener);
+    window.addEventListener('click', listener);
 
     return () => {
-      window.removeEventListener('mousedown', listener);
+      window.removeEventListener('click', listener);
     };
   }, []);
 
   return (
-    <div ref={profileRef} className='profile_wrapper'>
+    <div className='profile_wrapper'>
       <img className='profile_arrow' src='/img/arrow 2.svg' alt='' />
       <p className='profile_change_user'>Смена пользователя</p>
       <button className='profile_close' onClick={handleClose}></button>
