@@ -10,10 +10,11 @@
 
 .login_title {
   margin: 0;
-  padding: 0 0 16px;
-  font-size: 40px;
+  padding: 6px 0 16px;
+  font-size: 39px;
   text-align: center;
   line-height: 35px;
+  font-weight: normal;
 }
 
 .login_form {
@@ -106,7 +107,7 @@
   background-color: var(--button-bg-color);
   font-size: 18px;
   font-family: var(--ff-main);
-  font-weight: bold;
+  /* font-weight: bold; */
   line-height: 22.5px;
   color: var(--white);
   &:hover {
