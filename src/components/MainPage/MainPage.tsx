@@ -82,6 +82,20 @@ export const MainPage = () => {
               <p className='main_remaining_lessons_name'>Скорочтение</p>
               <div className='main_remaining_lessons_count'>4</div>
             </li>
+            <li>
+              <p className='main_remaining_lessons_name'>
+                Ментальная Арифметика
+              </p>
+              <div className='main_remaining_lessons_count'>32</div>
+            </li>
+            <li>
+              <p className='main_remaining_lessons_name'>Программирование</p>
+              <div className='main_remaining_lessons_count'>0</div>
+            </li>
+            <li>
+              <p className='main_remaining_lessons_name'>Скорочтение</p>
+              <div className='main_remaining_lessons_count'>4</div>
+            </li>
           </ul>
           <button className='main_remaining_lessons_button'>Button</button>
         </section>

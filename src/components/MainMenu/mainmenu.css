@@ -76,13 +76,13 @@
   background-color: var(--button-bg-color);
 }
 .menu_nav li:has(.menu_nav_active) a,
-.menu_nav li:has(.menu_nav_active) svg path {
+.menu_nav li:has(.menu_nav_active) .home_svg path {
   color: var(--white);
   fill: var(--white);
 }
-
-.schedule_svg {
+.menu_nav li:has(.menu_nav_active) .schedule_svg path {
   stroke: var(--white);
+  color: var(--white);
 }
 
 .disabled {

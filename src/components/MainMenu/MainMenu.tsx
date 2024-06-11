@@ -13,6 +13,7 @@ export const MainMenu = () => {
         <ul className='menu_nav'>
           <li>
             <svg
+              className='home_svg'
               width='24'
               height='24'
               viewBox='0 0 24 24'
@@ -34,6 +35,7 @@ export const MainMenu = () => {
           </li>
           <li>
             <svg
+              className='schedule_svg'
               width='24'
               height='24'
               viewBox='0 0 24 24'
