@@ -1,10 +1,16 @@
 import cn from 'classnames';
 import { useAppDispatch, useAppSelector } from '../../store/hooks';
-import { logOut, toggleProfile } from '../../store/userSlice';
+import { logOut } from '../../store/userSlice';
 import './profile.css';
 
-export const Profile = () => {
-  const { userName, isProfileClosed } = useAppSelector((state) => state.user);
+type ProfileProps = {
+  isProfileClosed: boolean;
+  toggleProfile: () => void;
+};
+
+export const Profile = (props: ProfileProps) => {
+  const { isProfileClosed, toggleProfile } = props;
+  const { userName } = useAppSelector((state) => state.user);
   const dispatch = useAppDispatch();
   const profileClassNames = cn('profile_wrapper', {
     hidden: isProfileClosed,
@@ -14,15 +20,15 @@ export const Profile = () => {
     dispatch(logOut());
   };
 
-  const handleToggle = () => {
-    dispatch(toggleProfile());
+  const handleClose = () => {
+    toggleProfile();
   };
 
   return (
     <div className={profileClassNames}>
       <img className='profile_arrow' src='/img/arrow 2.svg' alt='' />
       <p className='profile_change_user'>Смена пользователя</p>
-      <button className='profile_close' onClick={handleToggle}></button>
+      <button className='profile_close' onClick={handleClose}></button>
       <div className='profile_user_list'>
         <div className='profile_user current'>
           <img src='/img/avatar.jpg' alt='Ваше фото' />
