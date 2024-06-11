@@ -1,5 +1,5 @@
 .schedule {
-  margin: -640px 0 0 236px;
+  margin: -640px 0 0 286px;
   padding: 0 50px 0 32px;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
@@ -46,7 +46,7 @@
 }
 
 .schedule_calendar_header_nav {
-  margin-top: 25px;
+  margin-top: 26px;
   grid-column: span 2;
   display: flex;
   flex-flow: row nowrap;
@@ -80,7 +80,7 @@
   grid-column: 3/5;
   align-content: center;
   padding-left: 8px;
-  margin-top: 24px;
+  margin-top: 26px;
 }
 
 .schedule_calendar_header_today {

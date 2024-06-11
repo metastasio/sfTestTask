@@ -38,7 +38,7 @@ export const Profile = (props: ProfileProps) => {
           </div>
         </div>
         <div className='profile_user'>
-          <img src='' alt='Ваше фото' />
+          <img src='/img/2nd user avatar.jpg' alt='Ваше фото' />
           <div className='profile_user_details'>
             <p className='profile_user_name'>Анна</p>
           </div>

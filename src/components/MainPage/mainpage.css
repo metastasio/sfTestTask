@@ -1,5 +1,5 @@
 .main_page {
-  margin: -644px 0 0 236px;
+  margin: -640px 0 0 286px;
   padding: 0 50px 0 32px;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
@@ -8,7 +8,7 @@
 }
 
 .main_page_adv1 {
-  padding: 56px 192px 58px 40px;
+  padding: 56px 192px 56px 40px;
   background-color: var(--third-color);
   border-radius: var(--base-radius);
   grid-column: span 6;
@@ -108,17 +108,19 @@
 .main_remaining_lessons {
   height: 372px;
   grid-column: span 4;
-  padding: 28px 28px 30px;
+  padding: 28px 4px 30px 28px;
   border: 1px solid var(--main-border-color);
   border-radius: var(--base-radius);
 }
 
 .main_remaining_lessons_list {
-  margin: 16px 0 32px;
+  margin: 14px 0 32px;
   padding: 0;
   list-style-type: none;
   overflow-y: auto;
   max-height: 198px;
+  scrollbar-color: var(--secondary-bg) transparent;
+  scrollbar-width: thin;
 }
 
 .main_remaining_lessons_name {
@@ -133,10 +135,15 @@
   justify-content: space-between;
   align-items: center;
   gap: 10px;
-  padding: 10px 0 16px;
+  padding: 2px 0 2px;
   font-size: 16px;
-  line-height: 20px;
+  line-height: 16px;
+  height: 64px;
   border-bottom: 1px solid var(--secondary-border);
+}
+
+.main_remaining_lessons_list li {
+  padding-right: 24px;
 }
 
 .main_remaining_lessons_count {
