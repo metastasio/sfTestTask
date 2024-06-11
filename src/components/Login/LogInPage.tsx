@@ -44,6 +44,7 @@ export const LogInPage = () => {
           name='email'
           value={email}
           onChange={(e) => setEmail(e.target.value)}
+          required
         />
 
         <label className='sr_only' htmlFor='password'>
@@ -59,6 +60,7 @@ export const LogInPage = () => {
           onChange={(e) => {
             setPassword(e.target.value);
           }}
+          required
         />
         <div className='login_rm'>
           <input className='login_rm_check' id='remember_me' type='checkbox' />
