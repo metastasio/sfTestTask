@@ -8,6 +8,7 @@ import './login.css';
 export const LogInPage = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [hidden, toggleHidden] = useState('password');
   const navigate = useNavigate();
   const dispatch = useDispatch();
 
@@ -22,6 +23,10 @@ export const LogInPage = () => {
       setPassword('');
       navigate('/');
     }
+  };
+
+  const handleVisibility = () => {
+    toggleHidden((prev) => (prev === 'password' ? 'text' : 'password'));
   };
 
   return (
@@ -47,21 +52,29 @@ export const LogInPage = () => {
           required
         />
 
-        <label className='sr_only' htmlFor='password'>
-          Пароль
-        </label>
-        <input
-          className='input_password'
-          id='password'
-          type='password'
-          placeholder='Пароль'
-          name='password'
-          value={password}
-          onChange={(e) => {
-            setPassword(e.target.value);
-          }}
-          required
-        />
+        <div className='login_password_wrapper'>
+          <label className='sr_only' htmlFor='password'>
+            Пароль
+          </label>
+          <input
+            className='input_password'
+            id='password'
+            type={hidden}
+            placeholder='Пароль'
+            name='password'
+            value={password}
+            onChange={(e) => {
+              setPassword(e.target.value);
+            }}
+            required
+          />
+          <button
+            type='button'
+            className='login_password_show'
+            onClick={handleVisibility}
+          ></button>
+        </div>
+
         <div className='login_rm'>
           <input className='login_rm_check' id='remember_me' type='checkbox' />
           <label className='login_rm_label' htmlFor='remember_me'>

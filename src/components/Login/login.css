@@ -44,12 +44,25 @@
 .input_email {
   margin-bottom: 12px;
 }
+
+.login_password_wrapper {
+  position: relative;
+}
+
 .input_password {
   margin-bottom: 16px;
+}
+
+.login_password_show {
+  position: absolute;
+  border: none;
+  background-color: transparent;
   background-image: url('/img/icon_hide.svg');
   background-repeat: no-repeat;
-  background-position: center right 10px;
-  padding: 10px 26px 10px 12px;
+  width: 16px;
+  height: 16px;
+  top: 25%;
+  right: 10px;
 }
 
 .login_rm {
