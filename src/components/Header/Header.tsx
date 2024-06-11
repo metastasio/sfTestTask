@@ -18,7 +18,7 @@ export const Header = (props?: HeaderProps) => {
     <header className='header'>
       {props?.userName ? (
         <h2 className='header_title'>
-          Добро пожаловать,
+          Добро пожаловать,{' '}
           <span className='header_username'>{props?.userName}</span>!
         </h2>
       ) : null}

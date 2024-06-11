@@ -143,10 +143,7 @@ export const MainMenu = () => {
                 </clipPath>
               </defs>
             </svg>
-            <NavLink
-              to='/payment'
-              className={({ isActive }) => (isActive ? 'menu_nav_active' : '')}
-            >
+            <NavLink to='/payment' className='disabled'>
               Оплата
             </NavLink>
           </li>
@@ -163,7 +160,9 @@ export const MainMenu = () => {
                 fill='#434B74'
               />
             </svg>
-            <NavLink to='/achivements'>Достижения</NavLink>
+            <NavLink to='/achivements' className='disabled'>
+              Достижения
+            </NavLink>
           </li>
           <li>
             <svg
@@ -188,7 +187,9 @@ export const MainMenu = () => {
                 strokeLinejoin='round'
               />
             </svg>
-            <NavLink to='/trainings'>Тренажеры</NavLink>
+            <NavLink to='/trainings' className='disabled'>
+              Тренажеры
+            </NavLink>
           </li>
           <li>
             <svg
@@ -205,7 +206,9 @@ export const MainMenu = () => {
                 fill='#434B74'
               />
             </svg>
-            <NavLink to='/library'>Библиотека</NavLink>
+            <NavLink to='/library' className='disabled'>
+              Библиотека
+            </NavLink>
           </li>
           <li>
             <svg
@@ -223,7 +226,9 @@ export const MainMenu = () => {
                 strokeLinejoin='round'
               />
             </svg>
-            <NavLink to='/connection'>Проверка связи</NavLink>
+            <NavLink to='/connection' className='disabled'>
+              Проверка связи
+            </NavLink>
           </li>
           <li>
             <svg
@@ -250,7 +255,9 @@ export const MainMenu = () => {
                 strokeLinejoin='round'
               />
             </svg>
-            <NavLink to='/settings'>Настройки</NavLink>
+            <NavLink to='/settings' className='disabled'>
+              Настройки
+            </NavLink>
           </li>
           <li>
             <svg
@@ -284,7 +291,9 @@ export const MainMenu = () => {
                 strokeLinejoin='round'
               />
             </svg>
-            <NavLink to='/questions'>Вопросы</NavLink>
+            <NavLink to='/questions' className='disabled'>
+              Вопросы
+            </NavLink>
           </li>
         </ul>
       </nav>

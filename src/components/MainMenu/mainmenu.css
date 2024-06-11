@@ -84,3 +84,7 @@
 .schedule_svg {
   stroke: var(--white);
 }
+
+.disabled {
+  pointer-events: none;
+}
