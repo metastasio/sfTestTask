@@ -1,12 +1,14 @@
 import { useState } from 'react';
-import { useAppSelector } from '../../store/hooks';
 import { Profile } from '../Profile/Profile';
 
 import './header.css';
 
-export const Header = () => {
+type HeaderProps = {
+  userName: string;
+};
+
+export const Header = (props?: HeaderProps) => {
   const [isProfileClosed, openProfile] = useState(true);
-  const { userName } = useAppSelector((state) => state.user);
 
   const toggleProfile = () => {
     openProfile((prev) => !prev);
@@ -14,9 +16,12 @@ export const Header = () => {
 
   return (
     <header className='header'>
-      <h2 className='header_title'>
-        Добро пожаловать, <span className='header_username'>{userName}</span>!
-      </h2>
+      {props?.userName ? (
+        <h2 className='header_title'>
+          Добро пожаловать,
+          <span className='header_username'>{props?.userName}</span>!
+        </h2>
+      ) : null}
       <div className='header_personal'>
         <button className='header_msg'>
           <div className='header_unread_msg'>2</div>

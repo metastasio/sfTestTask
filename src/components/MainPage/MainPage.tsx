@@ -1,10 +1,12 @@
 import { useEffect, useState } from 'react';
+import { useAppSelector } from '../../store/hooks';
 import { Header } from '../Header/Header';
 import { MainMenu } from '../MainMenu/MainMenu';
 
 import './mainpage.css';
 
 export const MainPage = () => {
+  const { userName } = useAppSelector((state) => state.user);
   const [days, setDays] = useState(1);
   const [hours, setHours] = useState(0);
   const [minutes, setMinutes] = useState(0);
@@ -29,7 +31,7 @@ export const MainPage = () => {
 
   return (
     <>
-      <Header />
+      <Header userName={userName} />
       <MainMenu />
       <main className='main_page'>
         <section className='main_page_adv1'>
