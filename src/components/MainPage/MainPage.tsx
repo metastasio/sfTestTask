@@ -6,20 +6,22 @@ import { MainMenu } from '../MainMenu/MainMenu';
 import './mainpage.css';
 
 export const MainPage = () => {
+  const deadline = 'September, 11, 2024';
+  const time = Date.parse(deadline) - Date.now();
+  const currentDay = Math.floor(time / (1000 * 60 * 60 * 24));
+  const currentHours = Math.floor((time / (1000 * 60 * 60)) % 24);
+  const currentMinutes = Math.floor((time / 1000 / 60) % 60);
   const { userName } = useAppSelector((state) => state.user);
-  const [days, setDays] = useState(1);
-  const [hours, setHours] = useState(0);
-  const [minutes, setMinutes] = useState(0);
-  const [seconds, setSeconds] = useState(0);
+  const [days, setDays] = useState(currentDay);
+  const [hours, setHours] = useState(currentHours);
+  const [minutes, setMinutes] = useState(currentMinutes);
 
-  const deadline = 'August, 31, 2024';
   const getTime = (deadline: string) => {
     const time = Date.parse(deadline) - Date.now();
-    if (days > 0 || hours > 0 || minutes > 0 || seconds > 0) {
+    if (days > 0 || hours > 0 || minutes > 0) {
       setDays(Math.floor(time / (1000 * 60 * 60 * 24)));
       setHours(Math.floor((time / (1000 * 60 * 60)) % 24));
       setMinutes(Math.floor((time / 1000 / 60) % 60));
-      setSeconds(Math.floor((time / 1000) % 60));
     }
   };
 

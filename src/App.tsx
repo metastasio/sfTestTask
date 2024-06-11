@@ -2,13 +2,8 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { LogInPage } from './components/Login/LogInPage';
 import { MainPage } from './components/MainPage/MainPage';
 import { SchedulePage } from './components/Schedule/SchedulePage';
-import { NotFound } from './components/NotFound';
+import { NotFound } from './components/NotFound/NotFound';
 import { ProtectedRoute } from './components/ProtectedRoute';
-
-// type RouteProps = {
-//   path: string;
-//   element: (props?: JSX.Element) => JSX.Element;
-// };
 
 function App() {
   return (
@@ -32,8 +27,6 @@ function App() {
             </ProtectedRoute>
           }
         />
-        {/* <Route path='/' element={<MainPage />}></Route> */}
-        {/* <Route path='schedule' element={<SchedulePage />}></Route> */}
       </Routes>
     </BrowserRouter>
   );

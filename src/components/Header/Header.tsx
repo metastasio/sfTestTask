@@ -4,10 +4,10 @@ import { Profile } from '../Profile/Profile';
 import './header.css';
 
 type HeaderProps = {
-  userName: string;
+  userName?: string;
 };
 
-export const Header = (props?: HeaderProps) => {
+export const Header = (props: HeaderProps) => {
   const [isProfileClosed, openProfile] = useState(true);
 
   const toggleProfile = () => {
@@ -16,12 +16,13 @@ export const Header = (props?: HeaderProps) => {
 
   return (
     <header className='header'>
-      {props?.userName ? (
+      {props?.userName && (
         <h2 className='header_title'>
           Добро пожаловать,{' '}
           <span className='header_username'>{props?.userName}</span>!
         </h2>
-      ) : null}
+      )}
+
       <div className='header_personal'>
         <button className='header_msg'>
           <div className='header_unread_msg'>2</div>
