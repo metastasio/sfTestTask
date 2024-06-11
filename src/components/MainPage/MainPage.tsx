@@ -52,8 +52,7 @@ export const MainPage = () => {
             {hours}
             <span className='main_next_lesson_timer_unit'>ч</span>
             {minutes}
-            <span className='main_next_lesson_timer_unit'>мин</span>:
-            <span>{seconds}</span>
+            <span className='main_next_lesson_timer_unit'>мин</span>
           </p>
           <button className='main_next_lesson_button'>Button</button>
         </section>
