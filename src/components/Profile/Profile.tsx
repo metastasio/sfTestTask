@@ -1,17 +1,16 @@
-// import cn from 'classnames';
 import { useAppDispatch, useAppSelector } from '../../store/hooks';
 import { logOut } from '../../store/userSlice';
 import './profile.css';
 import { useEffect, useRef } from 'react';
 
 type ProfileProps = {
-  isProfileClosed: boolean;
+  openProfileRef: React.MutableRefObject<HTMLDivElement | null>;
   toggleProfile: () => void;
   closeProfile: () => void;
 };
 
 export const Profile = (props: ProfileProps) => {
-  const { toggleProfile, closeProfile } = props;
+  const { toggleProfile, closeProfile, openProfileRef } = props;
   const { userName } = useAppSelector((state) => state.user);
   const profileRef = useRef(null);
   const dispatch = useAppDispatch();
@@ -26,7 +25,13 @@ export const Profile = (props: ProfileProps) => {
 
   useEffect(() => {
     const listener = (e: MouseEvent) => {
-      if (e.target !== profileRef?.current) {
+      e.stopPropagation();
+      console.log(e.target !== profileRef?.current, '1');
+      console.log(e.target !== openProfileRef?.current, '2');
+      if (
+        e.target !== profileRef?.current ||
+        e.target !== openProfileRef?.current
+      ) {
         closeProfile();
       }
     };
