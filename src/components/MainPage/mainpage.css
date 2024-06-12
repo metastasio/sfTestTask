@@ -94,7 +94,7 @@
   background-position: right 16px bottom 16px;
 }
 
-.main_remaining_lessons {
+/* .main_remaining_lessons {
   grid-column: span 4;
   padding: 28px 4px 30px 28px;
   border: 1px solid var(--main-border-color);
@@ -163,14 +163,20 @@
   font-size: 16px;
 }
 
-.main_remaining_lessons,
+.main_remaining_lessons {
+  display: flex;
+  flex-direction: column;
+  min-height: 372px;
+} */
+
+/* .main_remaining_lessons,
 .main_upcoming_lessons {
   display: flex;
   flex-direction: column;
   min-height: 372px;
-}
+} */
 
-.main_upcoming_lessons {
+/* .main_upcoming_lessons {
   grid-column: span 8;
   padding: 28px 28px 30px;
   border: 1px solid var(--main-border-color);
@@ -254,7 +260,7 @@
 .main_upcoming_lessons_button_wrapper {
   padding: 0 154px;
   margin-top: auto;
-}
+} */
 
 @media (max-width: 1360px) {
   .main_page {

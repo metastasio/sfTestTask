@@ -5,6 +5,8 @@ import { MainMenu } from '../MainMenu/MainMenu';
 
 import './mainpage.css';
 import { Button } from '../Button/Button';
+import { RemainingLessonItem } from './RemainingLessonItem';
+import { UpcomingLessonItem } from './UpcomingLessonItem';
 
 export const MainPage = () => {
   const deadline = 'September, 11, 2024';
@@ -69,34 +71,12 @@ export const MainPage = () => {
         <section className='main_remaining_lessons'>
           <h2 className='main_remaining_lessons_title'>Баланс занятий</h2>
           <ul className='main_remaining_lessons_list'>
-            <li>
-              <p className='main_remaining_lessons_name'>
-                Ментальная Арифметика
-              </p>
-              <div className='main_remaining_lessons_count'>32</div>
-            </li>
-            <li>
-              <p className='main_remaining_lessons_name'>Программирование</p>
-              <div className='main_remaining_lessons_count'>0</div>
-            </li>
-            <li>
-              <p className='main_remaining_lessons_name'>Скорочтение</p>
-              <div className='main_remaining_lessons_count'>4</div>
-            </li>
-            <li>
-              <p className='main_remaining_lessons_name'>
-                Ментальная Арифметика
-              </p>
-              <div className='main_remaining_lessons_count'>32</div>
-            </li>
-            <li>
-              <p className='main_remaining_lessons_name'>Программирование</p>
-              <div className='main_remaining_lessons_count'>0</div>
-            </li>
-            <li>
-              <p className='main_remaining_lessons_name'>Скорочтение</p>
-              <div className='main_remaining_lessons_count'>4</div>
-            </li>
+            <RemainingLessonItem name='Ментальная Арифметика' count={32} />
+            <RemainingLessonItem name='Программирование' count={0} />
+            <RemainingLessonItem name='Скорочтение' count={4} />
+            <RemainingLessonItem name='Ментальная Арифметика' count={32} />
+            <RemainingLessonItem name='Программирование' count={0} />
+            <RemainingLessonItem name='Скорочтение' count={4} />
           </ul>
           <div className='main_remaining_lessons_button_wrapper'>
             <Button content='Button' classes='button_secondary' />
@@ -106,64 +86,27 @@ export const MainPage = () => {
         <section className='main_upcoming_lessons'>
           <h2>Ближайшие уроки</h2>
           <ul className='main_upcoming_lessons_list'>
-            <li>
-              <div className='main_upcoming_lessons_date'>
-                <p className='main_upcoming_lessons_day'>1</p>
-                <p className='main_upcoming_lessons_month'>мая</p>
-              </div>
-              <p className='main_upcoming_lessons_name'>
-                Ментальная Арифметика
-              </p>
-              <p className='main_upcoming_lessons_details_time'>14:00-14:25</p>
-              <div className='main_upcoming_lessons_teacher'>
-                <img src='/img/icon.svg' />
-                <p className='main_upcoming_lessons_details_name'>
-                  Белкина Инна
-                </p>
-              </div>
-              <div className='main_upcoming_lessons_buttons'>
-                <Button content='Button' classes='button_lessons_mini' />
-                <Button content='Button' classes='button_lessons_mini active' />
-              </div>
-            </li>
-            <li>
-              <div className='main_upcoming_lessons_date'>
-                <p className='main_upcoming_lessons_day'>30</p>
-                <p className='main_upcoming_lessons_month'>октября</p>
-              </div>
-              <p className='main_upcoming_lessons_name'>Программирование</p>
-
-              <p className='main_upcoming_lessons_details_time'>11:00-11:11</p>
-              <div className='main_upcoming_lessons_teacher'>
-                <img src='/img/icon.svg' />
-                <p className='main_upcoming_lessons_details_name'>
-                  Животновская Оксана
-                </p>
-              </div>
-
-              <div className='main_upcoming_lessons_buttons'>
-                <Button content='Button' classes='button_lessons_mini' />
-                <Button content='Button' classes='button_lessons_mini active' />
-              </div>
-            </li>
-            <li>
-              <div className='main_upcoming_lessons_date'>
-                <p className='main_upcoming_lessons_day'>16</p>
-                <p className='main_upcoming_lessons_month'>ноября</p>
-              </div>
-              <p className='main_upcoming_lessons_name'>Скорочтение</p>
-
-              <p className='main_upcoming_lessons_details_time'>09:00-09:45</p>
-              <div className='main_upcoming_lessons_teacher'>
-                <img src='/img/icon.svg' />
-                <p className='main_upcoming_lessons_details_name'>Мин Елена</p>
-              </div>
-
-              <div className='main_upcoming_lessons_buttons'>
-                <Button content='Button' classes='button_lessons_mini' />
-                <Button content='Button' classes='button_lessons_mini active' />
-              </div>
-            </li>
+            <UpcomingLessonItem
+              day={1}
+              month='мая'
+              lesson='Ментальная Арифметика'
+              time='14:00-14:25'
+              teacher='Белкина Инна'
+            />
+            <UpcomingLessonItem
+              day={30}
+              month='октября'
+              lesson='Программирование'
+              time='11:00-11:11'
+              teacher='Животновская Оксана'
+            />
+            <UpcomingLessonItem
+              day={16}
+              month='ноября'
+              lesson='Скорочтение'
+              time='09:00-09:45'
+              teacher='Мин Елена'
+            />
           </ul>
           <div className='main_upcoming_lessons_button_wrapper'>
             <Button content='Button' classes='button_secondary' />

@@ -1,6 +1,7 @@
 import { Button } from '../Button/Button';
 import { Header } from '../Header/Header';
 import { MainMenu } from '../MainMenu/MainMenu';
+import { CalendarDay } from './CalendarDay';
 import './schedule.css';
 
 export const SchedulePage = () => {
@@ -51,10 +52,9 @@ export const SchedulePage = () => {
             <div className='schedule_calendar_weekday'>Вс</div>
           </div>
           <div className='schedule_calendar_week'>
-            <div className='schedule_calendar_day inactive_month'>
-              <p className='schedule_calendar_day_date'>26</p>
-            </div>
-            <div className='schedule_calendar_day inactive_month'>
+            <CalendarDay date={26} />
+            <CalendarDay date={27} time1='13:00-13:45' time2='13:00-13:45' />
+            {/* <div className='schedule_calendar_day inactive_month'>
               <p className='schedule_calendar_day_date'>27</p>
               <div className='schedule_calendar_day_lesson complete'>
                 <p className='schedule_calendar_day_lesson_time'>13:00-13:45</p>
@@ -68,8 +68,9 @@ export const SchedulePage = () => {
                   Ментальная арифметика
                 </p>
               </div>
-            </div>
-            <div className='schedule_calendar_day inactive_month'>
+            </div> */}
+            <CalendarDay date={28} time1='13:00-13:45' time2='13:00-13:45' />
+            {/* <div className='schedule_calendar_day inactive_month'>
               <p className='schedule_calendar_day_date'>28</p>
               <div className='schedule_calendar_day_lesson crossedout'>
                 <p className='schedule_calendar_day_lesson_time'>13:00-13:45</p>
@@ -83,8 +84,9 @@ export const SchedulePage = () => {
                   Ментальная арифметика
                 </p>
               </div>
-            </div>
-            <div className='schedule_calendar_day inactive_month'>
+            </div> */}
+            <CalendarDay date={29} time1='13:00-13:45' time2='13:00-13:45' />
+            {/* <div className='schedule_calendar_day inactive_month'>
               <p className='schedule_calendar_day_date'>29</p>
               <div className='schedule_calendar_day_lesson unpaid'>
                 <p className='schedule_calendar_day_lesson_time'>13:00-13:45</p>
@@ -98,8 +100,9 @@ export const SchedulePage = () => {
                   Ментальная арифметика
                 </p>
               </div>
-            </div>
-            <div className='schedule_calendar_day'>
+            </div> */}
+            <CalendarDay date={1} time1='13:00-13:45' time2='13:00-13:45' />
+            {/* <div className='schedule_calendar_day'>
               <p className='schedule_calendar_day_date'>1</p>
               <div className='schedule_calendar_day_lesson todays1'>
                 <p className='schedule_calendar_day_lesson_time'>13:00-13:45</p>
@@ -113,8 +116,9 @@ export const SchedulePage = () => {
                   Ментальная арифметика
                 </p>
               </div>
-            </div>
-            <div className='schedule_calendar_day weekend'>
+            </div> */}
+            <CalendarDay date={2} time1='13:00-13:45' time2='13:00-13:45' />
+            {/* <div className='schedule_calendar_day weekend'>
               <p className='schedule_calendar_day_date'>2</p>
               <div className='schedule_calendar_day_lesson upcoming unpaid'>
                 <p className='schedule_calendar_day_lesson_time'>13:00-13:45</p>
@@ -128,8 +132,9 @@ export const SchedulePage = () => {
                   Ментальная арифметика
                 </p>
               </div>
-            </div>
-            <div className='schedule_calendar_day weekend'>
+            </div> */}
+            <CalendarDay date={3} time1='13:00-13:45' time2='13:00-13:45' />
+            {/* <div className='schedule_calendar_day weekend'>
               <p className='schedule_calendar_day_date'>3</p>
               <div className='schedule_calendar_day_lesson upcoming'>
                 <p className='schedule_calendar_day_lesson_time'>13:00-13:45</p>
@@ -143,10 +148,11 @@ export const SchedulePage = () => {
                   Ментальная арифметика
                 </p>
               </div>
-            </div>
+            </div> */}
           </div>
           <div className='schedule_calendar_week'>
-            <div className='schedule_calendar_day'>
+            <CalendarDay date={4} time2='13:00-13:45' />
+            {/* <div className='schedule_calendar_day'>
               <p className='schedule_calendar_day_date'>4</p>
               <div className='schedule_calendar_day_lesson'>
                 <p className='schedule_calendar_day_lesson_time'></p>
@@ -158,11 +164,10 @@ export const SchedulePage = () => {
                   Ментальная арифметика
                 </p>
               </div>
-            </div>
-            <div className='schedule_calendar_day'>
-              <p className='schedule_calendar_day_date'>5</p>
-            </div>
-            <div className='schedule_calendar_day'>
+            </div> */}
+            <CalendarDay date={5} />
+            <CalendarDay date={6} time2='13:00-13:45' />
+            {/* <div className='schedule_calendar_day'>
               <p className='schedule_calendar_day_date'>6</p>
               <div className='schedule_calendar_day_lesson'>
                 <p className='schedule_calendar_day_lesson_time'></p>
@@ -174,11 +179,10 @@ export const SchedulePage = () => {
                   Ментальная арифметика
                 </p>
               </div>
-            </div>
-            <div className='schedule_calendar_day'>
-              <p className='schedule_calendar_day_date'>7</p>
-            </div>
-            <div className='schedule_calendar_day'>
+            </div> */}
+            <CalendarDay date={7} />
+            <CalendarDay date={8} time2='13:00-13:45' />
+            {/* <div className='schedule_calendar_day'>
               <p className='schedule_calendar_day_date'>8</p>
               <div className='schedule_calendar_day_lesson'>
                 <p className='schedule_calendar_day_lesson_time'></p>
@@ -192,25 +196,16 @@ export const SchedulePage = () => {
                   Ментальная арифметика
                 </p>
               </div>
-            </div>
-            <div className='schedule_calendar_day weekend'>
-              <p className='schedule_calendar_day_date'>9</p>
-            </div>
-            <div className='schedule_calendar_day weekend'>
-              <p className='schedule_calendar_day_date'>10</p>
-            </div>
+            </div> */}
+            <CalendarDay date={9} />
+            <CalendarDay date={10} />
           </div>
           <div className='schedule_calendar_week'>
-            <div className='schedule_calendar_day'>
-              <p className='schedule_calendar_day_date'>11</p>
-            </div>
-            <div className='schedule_calendar_day'>
-              <p className='schedule_calendar_day_date'>12</p>
-            </div>
-            <div className='schedule_calendar_day'>
-              <p className='schedule_calendar_day_date'>13</p>
-            </div>
-            <div className='schedule_calendar_day'>
+            <CalendarDay date={11} />
+            <CalendarDay date={12} />
+            <CalendarDay date={13} />
+            <CalendarDay date={14} time2='13:00-13:45' />
+            {/* <div className='schedule_calendar_day'>
               <p className='schedule_calendar_day_date'>14</p>
               <div className='schedule_calendar_day_lesson'>
                 <p className='schedule_calendar_day_lesson_time'></p>
@@ -222,11 +217,10 @@ export const SchedulePage = () => {
                   Ментальная арифметика
                 </p>
               </div>
-            </div>
-            <div className='schedule_calendar_day'>
-              <p className='schedule_calendar_day_date'>15</p>
-            </div>
-            <div className='schedule_calendar_day weekend'>
+            </div> */}
+            <CalendarDay date={15} />
+            <CalendarDay date={16} time2='13:00-13:45' />
+            {/* <div className='schedule_calendar_day weekend'>
               <p className='schedule_calendar_day_date'>16</p>
               <div className='schedule_calendar_day_lesson'>
                 <p className='schedule_calendar_day_lesson_time'></p>
@@ -238,13 +232,12 @@ export const SchedulePage = () => {
                   Ментальная арифметика
                 </p>
               </div>
-            </div>
-            <div className='schedule_calendar_day weekend'>
-              <p className='schedule_calendar_day_date'>17</p>
-            </div>
+            </div> */}
+            <CalendarDay date={17} />
           </div>
           <div className='schedule_calendar_week'>
-            <div className='schedule_calendar_day'>
+            <CalendarDay date={18} time1='13:00-13:45' time2='13:00-13:45' />
+            {/* <div className='schedule_calendar_day'>
               <p className='schedule_calendar_day_date'>18</p>
               <div className='schedule_calendar_day_lesson upcoming unpaid'>
                 <p className='schedule_calendar_day_lesson_time'>13:00-13:45</p>
@@ -258,20 +251,13 @@ export const SchedulePage = () => {
                   Ментальная арифметика
                 </p>
               </div>
-            </div>
-            <div className='schedule_calendar_day'>
-              <p className='schedule_calendar_day_date'>19</p>
-            </div>
-            <div className='schedule_calendar_day'>
-              <p className='schedule_calendar_day_date'>20</p>
-            </div>
-            <div className='schedule_calendar_day'>
-              <p className='schedule_calendar_day_date'>21</p>
-            </div>
-            <div className='schedule_calendar_day'>
-              <p className='schedule_calendar_day_date'>22</p>
-            </div>
-            <div className='schedule_calendar_day weekend'>
+            </div> */}
+            <CalendarDay date={19} />
+            <CalendarDay date={20} />
+            <CalendarDay date={21} />
+            <CalendarDay date={22} />
+            <CalendarDay date={23} time2='13:00-13:45' />
+            {/* <div className='schedule_calendar_day weekend'>
               <p className='schedule_calendar_day_date'>23</p>
               <div className='schedule_calendar_day_lesson'>
                 <p className='schedule_calendar_day_lesson_time'></p>
@@ -283,31 +269,18 @@ export const SchedulePage = () => {
                   Ментальная арифметика
                 </p>
               </div>
-            </div>
-            <div className='schedule_calendar_day weekend'>
-              <p className='schedule_calendar_day_date'>24</p>
-            </div>
+            </div> */}
+            <CalendarDay date={24} />
           </div>
           <div className='schedule_calendar_week last'>
-            <div className='schedule_calendar_day'>
-              <p className='schedule_calendar_day_date'>25</p>
-            </div>
-            <div className='schedule_calendar_day'>
-              <p className='schedule_calendar_day_date'>26</p>
-            </div>
-            <div className='schedule_calendar_day'>
-              <p className='schedule_calendar_day_date'>27</p>
-            </div>
-            <div className='schedule_calendar_day'>
-              <p className='schedule_calendar_day_date'>28</p>
-            </div>
-            <div className='schedule_calendar_day'>
-              <p className='schedule_calendar_day_date'>29</p>
-            </div>
-            <div className='schedule_calendar_day weekend'>
-              <p className='schedule_calendar_day_date'>30</p>
-            </div>
-            <div className='schedule_calendar_day weekend'>
+            <CalendarDay date={25} />
+            <CalendarDay date={26} />
+            <CalendarDay date={27} />
+            <CalendarDay date={28} />
+            <CalendarDay date={29} />
+            <CalendarDay date={30} />
+            <CalendarDay date={31} time1='13:00-13:45' time2='13:00-13:45' />
+            {/* <div className='schedule_calendar_day weekend'>
               <p className='schedule_calendar_day_date'>31</p>
               <div className='schedule_calendar_day_lesson upcoming unpaid'>
                 <p className='schedule_calendar_day_lesson_time'>13:00-13:45</p>
@@ -321,7 +294,7 @@ export const SchedulePage = () => {
                   Ментальная арифметика
                 </p>
               </div>
-            </div>
+            </div> */}
           </div>
         </section>
       </main>
