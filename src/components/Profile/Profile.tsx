@@ -1,7 +1,7 @@
+import { useEffect } from 'react';
 import { useAppDispatch, useAppSelector } from '../../store/hooks';
 import { logOut } from '../../store/userSlice';
 import './profile.css';
-import { useEffect } from 'react';
 
 type ProfileProps = {
   openProfileRef: React.MutableRefObject<HTMLDivElement | null>;

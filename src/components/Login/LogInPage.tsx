@@ -2,9 +2,9 @@ import { FormEventHandler, useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { Link, useNavigate } from 'react-router-dom';
 import { logIn } from '../../store/userSlice';
+import { Button } from '../Button/Button';
 
 import './login.css';
-import { Button } from '../Button/Button';
 
 export const LogInPage = () => {
   const [email, setEmail] = useState('');

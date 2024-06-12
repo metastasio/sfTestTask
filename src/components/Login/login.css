@@ -120,7 +120,6 @@
   background-color: var(--button-bg-color);
   font-size: 18px;
   font-family: var(--ff-main);
-  /* font-weight: bold; */
   line-height: 22.5px;
   color: var(--white);
   &:hover {

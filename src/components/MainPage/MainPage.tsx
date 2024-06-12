@@ -2,11 +2,11 @@ import { useEffect, useState } from 'react';
 import { useAppSelector } from '../../store/hooks';
 import { Header } from '../Header/Header';
 import { MainMenu } from '../MainMenu/MainMenu';
-
-import './mainpage.css';
 import { Button } from '../Button/Button';
 import { RemainingLessonItem } from './RemainingLessonItem';
 import { UpcomingLessonItem } from './UpcomingLessonItem';
+
+import './mainpage.css';
 
 export const MainPage = () => {
   const deadline = 'September, 11, 2024';

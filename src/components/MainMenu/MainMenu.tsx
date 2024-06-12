@@ -1,6 +1,6 @@
 import { NavLink } from 'react-router-dom';
-import './mainmenu.css';
 import { Button } from '../Button/Button';
+import './mainmenu.css';
 
 export const MainMenu = () => {
   return (
