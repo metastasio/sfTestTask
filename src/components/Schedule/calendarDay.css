@@ -1,3 +1,47 @@
-.unScheduled1 {
+.unscheduled {
   visibility: hidden;
+}
+
+.unpaid {
+  border: 0.5px solid var(--accent);
+  background-image: url('/img/Wallet.svg');
+  background-repeat: no-repeat;
+  background-position: right 2px top 2px;
+}
+
+.upcoming {
+  background-color: var(--upcoming-lesson-bg);
+  border: var(--upcoming-lesson-bg);
+}
+
+.crossedout {
+  text-decoration: line-through;
+  text-decoration-color: var(--secondary-font);
+  border: 0.5px solid var(--secondary-font);
+}
+
+.complete {
+  border: 0.5px solid var(--complete-lesson-border);
+}
+
+.todays1 {
+  background-color: var(--todays-lesson1-bg);
+  border: 0.5px solid var(--todays-lesson1-border);
+}
+
+.todays2 {
+  background-color: var(--todays-lesson2-bg);
+  border: 0.5px solid var(--todays-lesson2-border);
+}
+
+.weekend {
+  background-color: var(--table-inactive-bg);
+}
+
+.weekend:last-child {
+  border-right: 1px solid var(--border-color);
+}
+
+.inactive_month {
+  color: var(--inactive-month);
 }

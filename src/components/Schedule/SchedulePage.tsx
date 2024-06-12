@@ -52,249 +52,244 @@ export const SchedulePage = () => {
             <div className='schedule_calendar_weekday'>Вс</div>
           </div>
           <div className='schedule_calendar_week'>
-            <CalendarDay date={26} />
-            <CalendarDay date={27} time1='13:00-13:45' time2='13:00-13:45' />
-            {/* <div className='schedule_calendar_day inactive_month'>
-              <p className='schedule_calendar_day_date'>27</p>
-              <div className='schedule_calendar_day_lesson complete'>
-                <p className='schedule_calendar_day_lesson_time'>13:00-13:45</p>
-                <p className='schedule_calendar_day_lesson_title'>
-                  Ментальная арифметика
-                </p>
-              </div>
-              <div className='schedule_calendar_day_lesson complete'>
-                <p className='schedule_calendar_day_lesson_time'>13:00-13:45</p>
-                <p className='schedule_calendar_day_lesson_title'>
-                  Ментальная арифметика
-                </p>
-              </div>
-            </div> */}
-            <CalendarDay date={28} time1='13:00-13:45' time2='13:00-13:45' />
-            {/* <div className='schedule_calendar_day inactive_month'>
-              <p className='schedule_calendar_day_date'>28</p>
-              <div className='schedule_calendar_day_lesson crossedout'>
-                <p className='schedule_calendar_day_lesson_time'>13:00-13:45</p>
-                <p className='schedule_calendar_day_lesson_title'>
-                  Ментальная арифметика
-                </p>
-              </div>
-              <div className='schedule_calendar_day_lesson crossedout'>
-                <p className='schedule_calendar_day_lesson_time'>13:00-13:45</p>
-                <p className='schedule_calendar_day_lesson_title'>
-                  Ментальная арифметика
-                </p>
-              </div>
-            </div> */}
-            <CalendarDay date={29} time1='13:00-13:45' time2='13:00-13:45' />
-            {/* <div className='schedule_calendar_day inactive_month'>
-              <p className='schedule_calendar_day_date'>29</p>
-              <div className='schedule_calendar_day_lesson unpaid'>
-                <p className='schedule_calendar_day_lesson_time'>13:00-13:45</p>
-                <p className='schedule_calendar_day_lesson_title'>
-                  Ментальная арифметика
-                </p>
-              </div>
-              <div className='schedule_calendar_day_lesson unpaid'>
-                <p className='schedule_calendar_day_lesson_time'>13:00-13:45</p>
-                <p className='schedule_calendar_day_lesson_title'>
-                  Ментальная арифметика
-                </p>
-              </div>
-            </div> */}
-            <CalendarDay date={1} time1='13:00-13:45' time2='13:00-13:45' />
-            {/* <div className='schedule_calendar_day'>
-              <p className='schedule_calendar_day_date'>1</p>
-              <div className='schedule_calendar_day_lesson todays1'>
-                <p className='schedule_calendar_day_lesson_time'>13:00-13:45</p>
-                <p className='schedule_calendar_day_lesson_title'>
-                  Ментальная арифметика
-                </p>
-              </div>
-              <div className='schedule_calendar_day_lesson todays2'>
-                <p className='schedule_calendar_day_lesson_time'>13:00-13:45</p>
-                <p className='schedule_calendar_day_lesson_title'>
-                  Ментальная арифметика
-                </p>
-              </div>
-            </div> */}
-            <CalendarDay date={2} time1='13:00-13:45' time2='13:00-13:45' />
-            {/* <div className='schedule_calendar_day weekend'>
-              <p className='schedule_calendar_day_date'>2</p>
-              <div className='schedule_calendar_day_lesson upcoming unpaid'>
-                <p className='schedule_calendar_day_lesson_time'>13:00-13:45</p>
-                <p className='schedule_calendar_day_lesson_title'>
-                  Ментальная арифметика
-                </p>
-              </div>
-              <div className='schedule_calendar_day_lesson upcoming unpaid'>
-                <p className='schedule_calendar_day_lesson_time'>13:00-13:45</p>
-                <p className='schedule_calendar_day_lesson_title'>
-                  Ментальная арифметика
-                </p>
-              </div>
-            </div> */}
-            <CalendarDay date={3} time1='13:00-13:45' time2='13:00-13:45' />
-            {/* <div className='schedule_calendar_day weekend'>
-              <p className='schedule_calendar_day_date'>3</p>
-              <div className='schedule_calendar_day_lesson upcoming'>
-                <p className='schedule_calendar_day_lesson_time'>13:00-13:45</p>
-                <p className='schedule_calendar_day_lesson_title'>
-                  Ментальная арифметика
-                </p>
-              </div>
-              <div className='schedule_calendar_day_lesson upcoming'>
-                <p className='schedule_calendar_day_lesson_time'>13:00-13:45</p>
-                <p className='schedule_calendar_day_lesson_title'>
-                  Ментальная арифметика
-                </p>
-              </div>
-            </div> */}
+            <CalendarDay
+              date={26}
+              monthType='inactive_month'
+              type1={{ unscheduled: true }}
+              type2={{ unscheduled: true }}
+            />
+            <CalendarDay
+              date={27}
+              monthType='inactive_month'
+              time1='13:00-13:45'
+              lesson1='Ментальная арифметика'
+              type1={{ complete: true }}
+              time2='13:00-13:45'
+              lesson2='Ментальная арифметика'
+              type2={{ complete: true }}
+            />
+            <CalendarDay
+              date={28}
+              monthType='inactive_month'
+              time1='13:00-13:45'
+              time2='13:00-13:45'
+              lesson1='Ментальная арифметика'
+              type1={{ crossedout: true }}
+              lesson2='Ментальная арифметика'
+              type2={{ crossedout: true }}
+            />
+            <CalendarDay
+              date={29}
+              monthType='inactive_month'
+              time1='13:00-13:45'
+              time2='13:00-13:45'
+              lesson1='Ментальная арифметика'
+              lesson2='Ментальная арифметика'
+              type1={{ unpaid: true }}
+              type2={{ unpaid: true }}
+            />
+            <CalendarDay
+              date={1}
+              time1='13:00-13:45'
+              time2='13:00-13:45'
+              lesson1='Ментальная арифметика'
+              lesson2='Ментальная арифметика'
+              type1={{ todays1: true }}
+              type2={{ todays2: true }}
+            />
+            <CalendarDay
+              dayType='weekend'
+              date={2}
+              time1='13:00-13:45'
+              time2='13:00-13:45'
+              lesson1='Ментальная арифметика'
+              lesson2='Ментальная арифметика'
+              type1={{ upcoming: true, unpaid: true }}
+              type2={{ upcoming: true, unpaid: true }}
+            />
+            <CalendarDay
+              dayType='weekend'
+              date={3}
+              time1='13:00-13:45'
+              time2='13:00-13:45'
+              lesson1='Ментальная арифметика'
+              lesson2='Ментальная арифметика'
+              type1={{ upcoming: true }}
+              type2={{ upcoming: true }}
+            />
           </div>
           <div className='schedule_calendar_week'>
-            <CalendarDay date={4} time2='13:00-13:45' />
-            {/* <div className='schedule_calendar_day'>
-              <p className='schedule_calendar_day_date'>4</p>
-              <div className='schedule_calendar_day_lesson'>
-                <p className='schedule_calendar_day_lesson_time'></p>
-                <p className='schedule_calendar_day_lesson_title'></p>
-              </div>
-              <div className='schedule_calendar_day_lesson upcoming unpaid'>
-                <p className='schedule_calendar_day_lesson_time'>13:00-13:45</p>
-                <p className='schedule_calendar_day_lesson_title'>
-                  Ментальная арифметика
-                </p>
-              </div>
-            </div> */}
-            <CalendarDay date={5} />
-            <CalendarDay date={6} time2='13:00-13:45' />
-            {/* <div className='schedule_calendar_day'>
-              <p className='schedule_calendar_day_date'>6</p>
-              <div className='schedule_calendar_day_lesson'>
-                <p className='schedule_calendar_day_lesson_time'></p>
-                <p className='schedule_calendar_day_lesson_title'></p>
-              </div>
-              <div className='schedule_calendar_day_lesson upcoming unpaid'>
-                <p className='schedule_calendar_day_lesson_time'>13:00-13:45</p>
-                <p className='schedule_calendar_day_lesson_title'>
-                  Ментальная арифметика
-                </p>
-              </div>
-            </div> */}
-            <CalendarDay date={7} />
-            <CalendarDay date={8} time2='13:00-13:45' />
-            {/* <div className='schedule_calendar_day'>
-              <p className='schedule_calendar_day_date'>8</p>
-              <div className='schedule_calendar_day_lesson'>
-                <p className='schedule_calendar_day_lesson_time'></p>
-                <p className='schedule_calendar_day_lesson_title'></p>
-              </div>
-              <div className='schedule_calendar_day_lesson upcoming unpaid'>
-                <p className='schedule_calendar_day_lesson_time upcoming'>
-                  13:00-13:45
-                </p>
-                <p className='schedule_calendar_day_lesson_title'>
-                  Ментальная арифметика
-                </p>
-              </div>
-            </div> */}
-            <CalendarDay date={9} />
-            <CalendarDay date={10} />
+            <CalendarDay
+              date={4}
+              time2='13:00-13:45'
+              lesson2='Ментальная арифметика'
+              type1={{ unscheduled: true }}
+              type2={{ upcoming: true, unpaid: true }}
+            />
+            <CalendarDay
+              date={5}
+              type1={{ unscheduled: true }}
+              type2={{ unscheduled: true }}
+            />
+            <CalendarDay
+              date={6}
+              time2='13:00-13:45'
+              lesson2='Ментальная арифметика'
+              type1={{ unscheduled: true }}
+              type2={{ upcoming: true, unpaid: true }}
+            />
+            <CalendarDay
+              date={7}
+              type1={{ unscheduled: true }}
+              type2={{ unscheduled: true }}
+            />
+            <CalendarDay
+              date={8}
+              time2='13:00-13:45'
+              lesson2='Ментальная арифметика'
+              type1={{ unscheduled: true }}
+              type2={{ upcoming: true, unpaid: true }}
+            />
+            <CalendarDay
+              dayType='weekend'
+              date={9}
+              type1={{ unscheduled: true }}
+              type2={{ unscheduled: true }}
+            />
+            <CalendarDay
+              dayType='weekend'
+              date={10}
+              type1={{ unscheduled: true }}
+              type2={{ unscheduled: true }}
+            />
           </div>
           <div className='schedule_calendar_week'>
-            <CalendarDay date={11} />
-            <CalendarDay date={12} />
-            <CalendarDay date={13} />
-            <CalendarDay date={14} time2='13:00-13:45' />
-            {/* <div className='schedule_calendar_day'>
-              <p className='schedule_calendar_day_date'>14</p>
-              <div className='schedule_calendar_day_lesson'>
-                <p className='schedule_calendar_day_lesson_time'></p>
-                <p className='schedule_calendar_day_lesson_title'></p>
-              </div>
-              <div className='schedule_calendar_day_lesson upcoming unpaid'>
-                <p className='schedule_calendar_day_lesson_time'>13:00-13:45</p>
-                <p className='schedule_calendar_day_lesson_title'>
-                  Ментальная арифметика
-                </p>
-              </div>
-            </div> */}
-            <CalendarDay date={15} />
-            <CalendarDay date={16} time2='13:00-13:45' />
-            {/* <div className='schedule_calendar_day weekend'>
-              <p className='schedule_calendar_day_date'>16</p>
-              <div className='schedule_calendar_day_lesson'>
-                <p className='schedule_calendar_day_lesson_time'></p>
-                <p className='schedule_calendar_day_lesson_title'></p>
-              </div>
-              <div className='schedule_calendar_day_lesson upcoming unpaid'>
-                <p className='schedule_calendar_day_lesson_time'>13:00-13:45</p>
-                <p className='schedule_calendar_day_lesson_title'>
-                  Ментальная арифметика
-                </p>
-              </div>
-            </div> */}
-            <CalendarDay date={17} />
+            <CalendarDay
+              date={11}
+              type1={{ unscheduled: true }}
+              type2={{ unscheduled: true }}
+            />
+            <CalendarDay
+              date={12}
+              type1={{ unscheduled: true }}
+              type2={{ unscheduled: true }}
+            />
+            <CalendarDay
+              date={13}
+              type1={{ unscheduled: true }}
+              type2={{ unscheduled: true }}
+            />
+            <CalendarDay
+              date={14}
+              time2='13:00-13:45'
+              type1={{ unscheduled: true }}
+              type2={{ upcoming: true, unpaid: true }}
+            />
+            <CalendarDay
+              date={15}
+              type1={{ unscheduled: true }}
+              type2={{ unscheduled: true }}
+            />
+            <CalendarDay
+              dayType='weekend'
+              date={16}
+              time2='13:00-13:45'
+              type1={{ unscheduled: true, weekend: true }}
+              type2={{ upcoming: true, unpaid: true }}
+            />
+            <CalendarDay
+              dayType='weekend'
+              date={17}
+              type1={{ unscheduled: true }}
+              type2={{ unscheduled: true }}
+            />
           </div>
           <div className='schedule_calendar_week'>
-            <CalendarDay date={18} time1='13:00-13:45' time2='13:00-13:45' />
-            {/* <div className='schedule_calendar_day'>
-              <p className='schedule_calendar_day_date'>18</p>
-              <div className='schedule_calendar_day_lesson upcoming unpaid'>
-                <p className='schedule_calendar_day_lesson_time'>13:00-13:45</p>
-                <p className='schedule_calendar_day_lesson_title'>
-                  Ментальная арифметика
-                </p>
-              </div>
-              <div className='schedule_calendar_day_lesson upcoming unpaid'>
-                <p className='schedule_calendar_day_lesson_time'>13:00-13:45</p>
-                <p className='schedule_calendar_day_lesson_title'>
-                  Ментальная арифметика
-                </p>
-              </div>
-            </div> */}
-            <CalendarDay date={19} />
-            <CalendarDay date={20} />
-            <CalendarDay date={21} />
-            <CalendarDay date={22} />
-            <CalendarDay date={23} time2='13:00-13:45' />
-            {/* <div className='schedule_calendar_day weekend'>
-              <p className='schedule_calendar_day_date'>23</p>
-              <div className='schedule_calendar_day_lesson'>
-                <p className='schedule_calendar_day_lesson_time'></p>
-                <p className='schedule_calendar_day_lesson_title'></p>
-              </div>
-              <div className='schedule_calendar_day_lesson upcoming unpaid'>
-                <p className='schedule_calendar_day_lesson_time'>13:00-13:45</p>
-                <p className='schedule_calendar_day_lesson_title'>
-                  Ментальная арифметика
-                </p>
-              </div>
-            </div> */}
-            <CalendarDay date={24} />
+            <CalendarDay
+              date={18}
+              time1='13:00-13:45'
+              time2='13:00-13:45'
+              lesson2='Ментальная арифметика'
+              type1={{ unscheduled: true }}
+              type2={{ upcoming: true, unpaid: true }}
+            />
+            <CalendarDay
+              date={19}
+              type1={{ unscheduled: true }}
+              type2={{ unscheduled: true }}
+            />
+            <CalendarDay
+              date={20}
+              type1={{ unscheduled: true }}
+              type2={{ unscheduled: true }}
+            />
+            <CalendarDay
+              date={21}
+              type1={{ unscheduled: true }}
+              type2={{ unscheduled: true }}
+            />
+            <CalendarDay
+              date={22}
+              type1={{ unscheduled: true }}
+              type2={{ unscheduled: true }}
+            />
+            <CalendarDay
+              dayType='weekend'
+              date={23}
+              time2='13:00-13:45'
+              lesson2='Ментальная арифметика'
+              type1={{ unscheduled: true }}
+              type2={{ upcoming: true, unpaid: true }}
+            />
+            <CalendarDay
+              dayType='weekend'
+              date={24}
+              type1={{ unscheduled: true }}
+              type2={{ unscheduled: true }}
+            />
           </div>
           <div className='schedule_calendar_week last'>
-            <CalendarDay date={25} />
-            <CalendarDay date={26} />
-            <CalendarDay date={27} />
-            <CalendarDay date={28} />
-            <CalendarDay date={29} />
-            <CalendarDay date={30} />
-            <CalendarDay date={31} time1='13:00-13:45' time2='13:00-13:45' />
-            {/* <div className='schedule_calendar_day weekend'>
-              <p className='schedule_calendar_day_date'>31</p>
-              <div className='schedule_calendar_day_lesson upcoming unpaid'>
-                <p className='schedule_calendar_day_lesson_time'>13:00-13:45</p>
-                <p className='schedule_calendar_day_lesson_title'>
-                  Ментальная арифметика
-                </p>
-              </div>
-              <div className='schedule_calendar_day_lesson upcoming'>
-                <p className='schedule_calendar_day_lesson_time'>13:00-13:45</p>
-                <p className='schedule_calendar_day_lesson_title'>
-                  Ментальная арифметика
-                </p>
-              </div>
-            </div> */}
+            <CalendarDay
+              date={25}
+              type1={{ unscheduled: true }}
+              type2={{ unscheduled: true }}
+            />
+            <CalendarDay
+              date={26}
+              type1={{ unscheduled: true }}
+              type2={{ unscheduled: true }}
+            />
+            <CalendarDay
+              date={27}
+              type1={{ unscheduled: true }}
+              type2={{ unscheduled: true }}
+            />
+            <CalendarDay
+              date={28}
+              type1={{ unscheduled: true }}
+              type2={{ unscheduled: true }}
+            />
+            <CalendarDay
+              date={29}
+              type1={{ unscheduled: true }}
+              type2={{ unscheduled: true }}
+            />
+            <CalendarDay
+              dayType='weekend'
+              date={30}
+              type1={{ unscheduled: true }}
+              type2={{ unscheduled: true }}
+            />
+            <CalendarDay
+              dayType='weekend'
+              date={31}
+              time1='13:00-13:45'
+              time2='13:00-13:45'
+              lesson1='Ментальная арифметика'
+              lesson2='Ментальная арифметика'
+              type1={{ upcoming: true, unpaid: true }}
+              type2={{ upcoming: true, unpaid: true }}
+            />
           </div>
         </section>
       </main>
