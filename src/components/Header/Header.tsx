@@ -28,24 +28,25 @@ export const Header = (props: HeaderProps) => {
         </h2>
       )}
 
-      <div
-        ref={openProfileRef}
-        className='header_personal'
-        onClick={toggleProfile}
-      >
+      <div className='header_personal'>
         <button className='header_msg'>
           <div className='header_unread_msg'>2</div>
           <img src='/img/Messages, Chat.svg' alt='Непрочитанные сообщения' />
         </button>
-        <button className='header_profile'>
-          <img src='/img/avatar.jpg' alt='Ваш профиль' />
-        </button>
-        <button className='header_profile_expand'></button>
+        <div
+          className='profile_toggle'
+          ref={openProfileRef}
+          onClick={toggleProfile}
+        >
+          <button className='header_profile'>
+            <img src='/img/avatar.jpg' alt='Ваш профиль' />
+          </button>
+          <button className='header_profile_expand'></button>
+        </div>
       </div>
       {isOpen && (
         <Profile
           openProfileRef={openProfileRef}
-          // isProfileClosed={isOpen}
           toggleProfile={toggleProfile}
           closeProfile={closeProfile}
         />

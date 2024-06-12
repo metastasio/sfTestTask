@@ -62,10 +62,10 @@ export const SchedulePage = () => {
               date={27}
               monthType='inactive_month'
               time1='13:00-13:45'
-              lesson1='Ментальная арифметика'
-              type1={{ complete: true }}
               time2='13:00-13:45'
+              lesson1='Ментальная арифметика'
               lesson2='Ментальная арифметика'
+              type1={{ complete: true }}
               type2={{ complete: true }}
             />
             <CalendarDay
@@ -74,8 +74,8 @@ export const SchedulePage = () => {
               time1='13:00-13:45'
               time2='13:00-13:45'
               lesson1='Ментальная арифметика'
-              type1={{ crossedout: true }}
               lesson2='Ментальная арифметика'
+              type1={{ crossedout: true }}
               type2={{ crossedout: true }}
             />
             <CalendarDay
