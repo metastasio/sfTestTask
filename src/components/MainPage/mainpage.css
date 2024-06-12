@@ -1,10 +1,10 @@
 .main_page {
-  margin: -639px 0 0 286px;
   padding: 0 50px 0 32px;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   grid-template-rows: repeat(3, auto);
   gap: 20px;
+  grid-area: main;
 }
 
 .main_page_adv1 {

@@ -6,7 +6,7 @@ import './schedule.css';
 
 export const SchedulePage = () => {
   return (
-    <>
+    <div className='main_container'>
       <Header />
       <MainMenu />
       <main className='schedule'>
@@ -293,6 +293,6 @@ export const SchedulePage = () => {
           </div>
         </section>
       </main>
-    </>
+    </div>
   );
 };

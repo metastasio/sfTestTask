@@ -1,10 +1,10 @@
 .menu {
   max-width: 236px;
-  margin-top: -44px;
   margin-left: 50px;
   padding: 44px 20px 24px 0;
   background-color: var(--secondary-bg);
   border-radius: var(--base-radius);
+  grid-area: sidebar;
 }
 
 .menu_logo {

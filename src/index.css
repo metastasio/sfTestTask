@@ -130,3 +130,13 @@ button {
 input:focus-visible {
   outline: 1px solid var(--link-font-color);
 }
+
+.main_container {
+  display: grid;
+  grid-template-areas:
+    '. header'
+    'sidebar header'
+    'sidebar header'
+    'sidebar main';
+  grid-template-columns: 288px 1fr;
+}

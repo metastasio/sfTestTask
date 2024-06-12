@@ -1,9 +1,10 @@
 .schedule {
-  margin: -640px 0 0 286px;
   padding: 0 50px 0 32px;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   grid-template-rows: repeat(5, auto);
+
+  grid-area: main;
 }
 
 .schedule_choose_lesson {

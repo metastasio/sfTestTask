@@ -1,4 +1,4 @@
-.header {
+/* .header {
   background-color: var(--main-bg);
   margin-left: 286px;
   padding: 12px 50px 12px 32px;
@@ -10,6 +10,20 @@
   align-items: center;
   box-shadow: 0 10px 12px -2px var(--border-color);
   position: relative;
+} */
+
+.header {
+  background-color: var(--main-bg);
+  padding: 12px 50px 12px 32px;
+  height: 68px;
+  border-bottom-left-radius: 24px;
+  border-bottom-right-radius: 24px;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  box-shadow: 0 10px 12px -2px var(--border-color);
+  position: relative;
+  grid-area: header;
 }
 
 .header_username {

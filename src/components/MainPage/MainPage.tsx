@@ -35,7 +35,7 @@ export const MainPage = () => {
   }, []);
 
   return (
-    <>
+    <div className='main_container'>
       <Header userName={userName} />
       <MainMenu />
       <main className='main_page'>
@@ -113,6 +113,6 @@ export const MainPage = () => {
           </div>
         </section>
       </main>
-    </>
+    </div>
   );
 };
