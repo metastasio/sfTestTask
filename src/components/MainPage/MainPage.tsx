@@ -4,6 +4,7 @@ import { Header } from '../Header/Header';
 import { MainMenu } from '../MainMenu/MainMenu';
 
 import './mainpage.css';
+import { Button } from '../Button/Button';
 
 export const MainPage = () => {
   const deadline = 'September, 11, 2024';
@@ -58,7 +59,7 @@ export const MainPage = () => {
             {minutes}
             <span className='main_next_lesson_timer_unit'>мин</span>
           </p>
-          <button className='main_next_lesson_button'>Button</button>
+          <Button content='Button' classes='button_dashed' />
         </section>
 
         <section className='main_hometask'>Домашние задания</section>
@@ -98,7 +99,7 @@ export const MainPage = () => {
             </li>
           </ul>
           <div className='main_remaining_lessons_button_wrapper'>
-            <button className='main_remaining_lessons_button'>Button</button>
+            <Button content='Button' classes='button_secondary' />
           </div>
         </section>
 
@@ -121,8 +122,8 @@ export const MainPage = () => {
                 </p>
               </div>
               <div className='main_upcoming_lessons_buttons'>
-                <button>Button</button>
-                <button className='active'>Button</button>
+                <Button content='Button' classes='button_lessons_mini' />
+                <Button content='Button' classes='button_lessons_mini active' />
               </div>
             </li>
             <li>
@@ -141,8 +142,8 @@ export const MainPage = () => {
               </div>
 
               <div className='main_upcoming_lessons_buttons'>
-                <button>Button</button>
-                <button className='active'>Button</button>
+                <Button content='Button' classes='button_lessons_mini' />
+                <Button content='Button' classes='button_lessons_mini active' />
               </div>
             </li>
             <li>
@@ -159,13 +160,13 @@ export const MainPage = () => {
               </div>
 
               <div className='main_upcoming_lessons_buttons'>
-                <button>Button</button>
-                <button className='active'>Button</button>
+                <Button content='Button' classes='button_lessons_mini' />
+                <Button content='Button' classes='button_lessons_mini active' />
               </div>
             </li>
           </ul>
           <div className='main_upcoming_lessons_button_wrapper'>
-            <button className='main_upcoming_lessons_button'>Button</button>
+            <Button content='Button' classes='button_secondary' />
           </div>
         </section>
       </main>

@@ -77,10 +77,6 @@ html {
   padding: 0;
 }
 
-/* #root {
-  margin: 0 0 0 50px ;
-} */
-
 *,
 *::before,
 *::after {
@@ -109,6 +105,9 @@ body {
 a {
   text-decoration: none;
   color: var(--link-font-color);
+  &:focus-visible {
+    outline: 1px solid var(--link-font-color);
+  }
 }
 
 h2 {
@@ -124,4 +123,10 @@ button {
   &:hover {
     cursor: pointer;
   }
+  &:focus-visible {
+    outline: 1px solid var(--link-font-color);
+  }
+}
+input:focus-visible {
+  outline: 1px solid var(--link-font-color);
 }

@@ -4,6 +4,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import { logIn } from '../../store/userSlice';
 
 import './login.css';
+import { Button } from '../Button/Button';
 
 export const LogInPage = () => {
   const [email, setEmail] = useState('');
@@ -82,7 +83,7 @@ export const LogInPage = () => {
           </label>
         </div>
 
-        <button className='login_enter'>Войти</button>
+        <Button content='Войти' classes='button_main'/>
         <div className='login_enter_links'>
           <Link to='/restore-password'>Я забыл пароль</Link>
           <Link to='/trainer-login'>Войти как тренер</Link>

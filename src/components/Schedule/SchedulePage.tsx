@@ -1,3 +1,4 @@
+import { Button } from '../Button/Button';
 import { Header } from '../Header/Header';
 import { MainMenu } from '../MainMenu/MainMenu';
 import './schedule.css';
@@ -23,9 +24,10 @@ export const SchedulePage = () => {
             <option value='hamster'>Скорочтение</option>
           </select>
 
-          <button className='schedule_choose_lesson_button'>
-            Изменить расписание
-          </button>
+          <Button
+            content='Изменить расписание'
+            classes='button_secondary_schedule'
+          />
         </section>
 
         <div className='schedule_calendar_header_nav'>
@@ -34,7 +36,7 @@ export const SchedulePage = () => {
           <button className='schedule_calendar_header_next'></button>
         </div>
         <div className='schedule_calendar_header_today_span'>
-          <button className='schedule_calendar_header_today'>Сегодня</button>
+          <Button content='Сегодня' classes='button_schedule_mini' />
           <button className='schedule_calendar_header_info'></button>
         </div>
 

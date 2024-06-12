@@ -1,5 +1,6 @@
 import { NavLink } from 'react-router-dom';
 import './mainmenu.css';
+import { Button } from '../Button/Button';
 
 export const MainMenu = () => {
   return (
@@ -305,7 +306,7 @@ export const MainMenu = () => {
           Приводите друзей с детьми заниматься в Sirius Future и получайте
           подарки!
         </p>
-        <button className='menu_adv_banner_button'>Узнать</button>
+        <Button content='Узнать' classes='button_adv_side' />
       </div>
     </section>
   );

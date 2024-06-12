@@ -34,17 +34,6 @@
   }
 }
 
-.schedule_choose_lesson_button {
-  grid-column: 9/13;
-  background-color: var(--bg-lightpurple);
-  margin: 0;
-  padding: 10px 0;
-  font-size: 16px;
-  line-height: 20px;
-  border: none;
-  border-radius: var(--base-radius);
-}
-
 .schedule_calendar_header_nav {
   margin-top: 26px;
   grid-column: span 2;
@@ -81,16 +70,6 @@
   align-content: center;
   padding-left: 8px;
   margin-top: 26px;
-}
-
-.schedule_calendar_header_today {
-  margin: 0;
-  margin-right: 16px;
-  padding: 8px 20px;
-  background-color: transparent;
-  border: 1px solid var(--main-border-color);
-  border-radius: var(--md-radius);
-  font-size: 12px;
 }
 
 .schedule_calendar_header_info {
